@@ -7,14 +7,30 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li class="divider">|</li>
+      <li class="language-select">
+        <span 
+          :class="{ inactive: currentLanguage !== 'EN' }" 
+          @click="changeLanguage('EN')"
+        >
+          EN
+        </span>
+        /
+        <span 
+          :class="{ inactive: currentLanguage !== 'JP' }" 
+          @click="changeLanguage('JP')"
+        >
+          JP
+        </span>
+      </li>
     </ul>
-    <div class="menu-icon-wrapper">
+    <button class="menu-icon">
       <svg fill="#fff" viewBox="0 0 100 100" width="100%" height="100%">
         <rect width="85" height="12" x="10" y="15" rx="5"></rect>
         <rect width="85" height="12" x="10" y="45" rx="5"></rect>
         <rect width="85" height="12" x="10" y="75" rx="5"></rect>
       </svg>
-    </div>
+    </button>
   </nav>
 </template>
 
@@ -23,11 +39,27 @@ export default {
   name: "Navbar",
   data() {
     return {
-      isSticky: false
+      isSticky: false,
+      currentLanguage: 'EN'
     }
   },
-  created () {
+  created() {
     window.addEventListener('scroll', () => { this.isSticky = window.scrollY > 0 })
+  },
+  methods: {
+    changeLanguage(lang) {
+      switch(lang) {
+        case "EN":
+          this.currentLanguage = "EN"
+          break
+        case "JP":
+          this.currentLanguage = "JP"
+          break
+        default:
+          this.currentLanguage = "EN"
+          break
+      }
+    }
   }
 }
 </script>
@@ -64,6 +96,16 @@ nav ul {
 nav ul li {
   position: relative;
   list-style: none;
+  color: #fff;
+  letter-spacing: 2px;
+}
+nav ul li.divider {
+  margin: 0 15px;
+  user-select: none;
+}
+nav ul li.language-select {
+  margin-left: 15px;
+  user-select: none;
 }
 nav ul li a {
   position: relative;
@@ -74,17 +116,32 @@ nav ul li a {
   font-weight: 500;
   user-select: none;
 }
-.sticky {
+nav ul li a:hover {
+  color: #FFC300 
+}
+nav ul li span.active {
+  font-weight: bold;
+}
+nav ul li span.inactive {
+  color: #aaa;
+  cursor: pointer;
+}
+nav ul li span.inactive:hover {
+  color: #FFC300 
+}
+nav.sticky {
   padding: 5px 100px;
   background: #000;
   z-index: 99;
 }
-div .menu-icon-wrapper {
+button.menu-icon {
   display: none;
   height: 2em;
   width: 2em;
+  background: transparent;
+  border: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   nav {
     padding-left: 20px !important;
     padding-right: 20px !important;
@@ -92,7 +149,7 @@ div .menu-icon-wrapper {
   nav ul {
     display: none;
   }
-  div .menu-icon-wrapper {
+  button.menu-icon {
     display: block;
   }
 }
