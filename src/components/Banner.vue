@@ -15,7 +15,7 @@ export default {
 
 <style scoped>
 .banner-wrapper {
-  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
@@ -30,11 +30,12 @@ export default {
   color: white;
   text-transform: uppercase;
   display: block;
+  user-select: none;
 }
 .banner-text .main-text {
   font-size: 8vw;
   font-weight: 500;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   position: relative;
   animation: main-text 3s 1;
 }
@@ -48,7 +49,7 @@ export default {
     margin-bottom: -50px;
   }
   30% {
-    letter-spacing: 9px;
+    letter-spacing: 20px;
     margin-bottom: -50px;
   }
   85% {

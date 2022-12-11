@@ -38,6 +38,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,6 +53,7 @@ nav .logo {
   font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
+  user-select: none;
 }
 nav ul {
   position: relative;
@@ -70,10 +72,12 @@ nav ul li a {
   color: #fff;
   letter-spacing: 2px;
   font-weight: 500;
+  user-select: none;
 }
 .sticky {
   padding: 5px 100px;
   background: #000;
+  z-index: 99;
 }
 div .menu-icon-wrapper {
   display: none;
