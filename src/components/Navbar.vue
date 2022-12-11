@@ -45,18 +45,23 @@ export default {
   },
   created() {
     window.addEventListener('scroll', () => { this.isSticky = window.scrollY > 0 })
+    if(this.getUserLocale().includes('ja')) this.changeLanguage('JP')
   },
   methods: {
+    getUserLocale() {
+       if(navigator.languages && navigator.languages.length) return navigator.languages[0]
+       return navigator.userLanguage || navigator.language || navigator.browserLanguage
+    },
     changeLanguage(lang) {
       switch(lang) {
-        case "EN":
-          this.currentLanguage = "EN"
+        case 'EN':
+          this.currentLanguage = 'EN'
           break
-        case "JP":
-          this.currentLanguage = "JP"
+        case 'JP':
+          this.currentLanguage = 'JP'
           break
         default:
-          this.currentLanguage = "EN"
+          this.currentLanguage = 'EN'
           break
       }
     }
