@@ -16,8 +16,11 @@
 </template>
 
 <script setup>
+import { provide } from "vue"
+import store from "@/stores/mainStore"
 import Navbar from "@/components/Navbar.vue"
 import Banner from "@/components/Banner.vue"
+provide('store', store)
 </script>
 
 <style scoped>

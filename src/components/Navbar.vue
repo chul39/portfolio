@@ -10,21 +10,21 @@
       <li class="divider">|</li>
       <li class="language-select">
         <span 
-          :class="{ inactive: currentLanguage !== 'EN' }" 
-          @click="changeLanguage('EN')"
+          :class="{ inactive: store.state.currentLanguage !== 'EN' }" 
+          @click="store.methods.changeLanguage('EN')"
         >
           EN
         </span>
         /
         <span 
-          :class="{ inactive: currentLanguage !== 'JP' }" 
-          @click="changeLanguage('JP')"
+          :class="{ inactive: store.state.currentLanguage !== 'JP' }" 
+          @click="store.methods.changeLanguage('JP')"
         >
           JP
         </span>
       </li>
     </ul>
-    <button class="menu-icon">
+    <button class="menu-icon" @click="store.methods.toggleMobileMenu()">
       <svg fill="#fff" viewBox="0 0 100 100" width="100%" height="100%">
         <rect width="85" height="12" x="10" y="15" rx="5"></rect>
         <rect width="85" height="12" x="10" y="45" rx="5"></rect>
@@ -35,13 +35,13 @@
 </template>
 
 <script>
-import { onMounted, ref  } from 'vue'
+import { onMounted, ref, inject } from 'vue'
 export default {
   name: "Navbar",
   setup() {
 
+    const store = inject('store')
     const isSticky = ref(false)
-    const currentLanguage = ref('EN')
 
     const getUserLocale = () => {
       if(navigator.languages && navigator.languages.length) return navigator.languages[0]
@@ -53,21 +53,7 @@ export default {
       if(getUserLocale().includes('ja')) changeLanguage('JP')
     })
 
-    const changeLanguage = (lang) => {
-      switch(lang) {
-        case 'EN':
-          currentLanguage.value = 'EN'
-          break
-        case 'JP':
-          currentLanguage.value = 'JP'
-          break
-        default:
-          currentLanguage.value = 'EN'
-          break
-      }
-    }
-
-    return { isSticky, currentLanguage, changeLanguage }
+    return { store, isSticky }
 
   }
 }
