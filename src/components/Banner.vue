@@ -2,7 +2,7 @@
   <div class="banner-wrapper">
     <div class="banner-text">
       <span class="main-text">CHUNLAPHAT</span>
-      <span class="sub-text">WEB・GAME DEVELOPER</span>
+      <span class="sub-text">WEB・GAME ENGINEER</span>
     </div>
   </div>
 </template>
@@ -41,7 +41,8 @@ export default {
 }
 .banner-text .sub-text {
   font-size: 4vw;
-  animation:sub-text 3s 1;
+  color: #FFC300;
+  animation: sub-text 3s 1;
 }
 @keyframes main-text {
   0% {
@@ -49,7 +50,7 @@ export default {
     margin-bottom: -50px;
   }
   30% {
-    letter-spacing: 20px;
+    letter-spacing: 30px;
     margin-bottom: -50px;
   }
   85% {

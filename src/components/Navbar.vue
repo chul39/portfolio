@@ -35,36 +35,40 @@
 </template>
 
 <script>
+import { onMounted, ref  } from 'vue'
 export default {
   name: "Navbar",
-  data() {
-    return {
-      isSticky: false,
-      currentLanguage: 'EN'
+  setup() {
+
+    const isSticky = ref(false)
+    const currentLanguage = ref('EN')
+
+    const getUserLocale = () => {
+      if(navigator.languages && navigator.languages.length) return navigator.languages[0]
+      return navigator.userLanguage || navigator.language || navigator.browserLanguage
     }
-  },
-  created() {
-    window.addEventListener('scroll', () => { this.isSticky = window.scrollY > 0 })
-    if(this.getUserLocale().includes('ja')) this.changeLanguage('JP')
-  },
-  methods: {
-    getUserLocale() {
-       if(navigator.languages && navigator.languages.length) return navigator.languages[0]
-       return navigator.userLanguage || navigator.language || navigator.browserLanguage
-    },
-    changeLanguage(lang) {
+
+    onMounted(() => {
+      window.addEventListener('scroll', () => { isSticky.value = window.scrollY > 0 })
+      if(getUserLocale().includes('ja')) changeLanguage('JP')
+    })
+
+    const changeLanguage = (lang) => {
       switch(lang) {
         case 'EN':
-          this.currentLanguage = 'EN'
+          currentLanguage.value = 'EN'
           break
         case 'JP':
-          this.currentLanguage = 'JP'
+          currentLanguage.value = 'JP'
           break
         default:
-          this.currentLanguage = 'EN'
+          currentLanguage.value = 'EN'
           break
       }
     }
+
+    return { isSticky, currentLanguage, changeLanguage }
+
   }
 }
 </script>
@@ -122,7 +126,7 @@ nav ul li a {
   user-select: none;
 }
 nav ul li a:hover {
-  color: #FFC300 
+  color: #FFC300;
 }
 nav ul li span.active {
   font-weight: bold;
