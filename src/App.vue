@@ -1,6 +1,7 @@
 <template>
   <header>
     <Navbar />
+    <OverlayMenu />
     <Banner />
   </header>
   <main>
@@ -20,6 +21,7 @@ import { provide } from "vue"
 import store from "@/stores/mainStore"
 import Navbar from "@/components/Navbar.vue"
 import Banner from "@/components/Banner.vue"
+import OverlayMenu from "@/components/OverlayMenu.vue"
 provide('store', store)
 </script>
 

@@ -2,11 +2,11 @@
   <nav :class="{ sticky: isSticky }">
     <a href="#" class="logo">CS</a>
     <ul>
-      <li><a href="#">Top</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#">{{ keys[store.state.currentLanguage].top }}</a></li>
+      <li><a href="#about">{{ keys[store.state.currentLanguage].about }}</a></li>
+      <li><a href="#services">{{ keys[store.state.currentLanguage].service }}</a></li>
+      <li><a href="#portfolio">{{ keys[store.state.currentLanguage].portfolio }}</a></li>
+      <li><a href="#contact">{{ keys[store.state.currentLanguage].contact }}</a></li>
       <li class="divider">|</li>
       <li class="language-select">
         <span 
@@ -24,7 +24,7 @@
         </span>
       </li>
     </ul>
-    <button class="menu-icon" @click="store.methods.toggleMobileMenu()">
+    <button class="menu-icon" @click="store.methods.toggleOverlay()">
       <svg fill="#fff" viewBox="0 0 100 100" width="100%" height="100%">
         <rect width="85" height="12" x="10" y="15" rx="5"></rect>
         <rect width="85" height="12" x="10" y="45" rx="5"></rect>
@@ -43,6 +43,23 @@ export default {
     const store = inject('store')
     const isSticky = ref(false)
 
+    const keys = {
+      "EN": {
+        top: "TOP",
+        about: "ABOUT",
+        service: "SERVICES",
+        portfolio: "PORTFOLIO",
+        contact: "CONTACT"
+      },
+      "JP": {
+        top: "トップ",
+        about: "自己紹介",
+        service: "サービス",
+        portfolio: "ポートフォリオ",
+        contact: "お問い合わせ"
+      }
+    }
+
     const getUserLocale = () => {
       if(navigator.languages && navigator.languages.length) return navigator.languages[0]
       return navigator.userLanguage || navigator.language || navigator.browserLanguage
@@ -53,7 +70,7 @@ export default {
       if(getUserLocale().includes('ja')) changeLanguage('JP')
     })
 
-    return { store, isSticky }
+    return { store, keys, isSticky }
 
   }
 }
@@ -114,9 +131,6 @@ nav ul li a {
 nav ul li a:hover {
   color: #FFC300;
 }
-nav ul li span.active {
-  font-weight: bold;
-}
 nav ul li span.inactive {
   color: #aaa;
   cursor: pointer;
@@ -127,7 +141,7 @@ nav ul li span.inactive:hover {
 nav.sticky {
   padding: 5px 100px;
   background: #000;
-  z-index: 99;
+  z-index: 98;
 }
 button.menu-icon {
   display: none;
@@ -135,8 +149,9 @@ button.menu-icon {
   width: 2em;
   background: transparent;
   border: none;
+  cursor: pointer;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   nav {
     padding-left: 20px !important;
     padding-right: 20px !important;

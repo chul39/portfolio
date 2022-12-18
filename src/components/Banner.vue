@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import { inject } from 'vue'
 export default {
   name: "Banner"
 }
@@ -35,7 +36,6 @@ export default {
 .banner-text .main-text {
   font-size: 8vw;
   font-weight: 500;
-  letter-spacing: 5px;
   position: relative;
   animation: main-text 3s 1;
 }
@@ -54,7 +54,6 @@ export default {
     margin-bottom: -50px;
   }
   85% {
-    letter-spacing: 5px;
     margin-bottom: -50px;
   }
 }
@@ -67,7 +66,7 @@ export default {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 992px) {
   .banner-text .main-text {
     font-size: 10vw;
   }

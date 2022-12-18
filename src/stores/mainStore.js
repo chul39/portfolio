@@ -2,15 +2,15 @@ import { reactive, readonly } from 'vue'
 
 const state = reactive({
   currentLanguage: 'EN',
-  isMobileMenuOpen: false
+  isOverlayActive: false
 })
 
 const methods = {
   changeLanguage(targetLanguage) {
     state.currentLanguage = targetLanguage
   },
-  toggleMobileMenu() {
-    state.isMobileMenuOpen = !state.isMobileMenuOpen
+  toggleOverlay() {
+    state.isOverlayActive = !state.isOverlayActive
   }
 }
 
