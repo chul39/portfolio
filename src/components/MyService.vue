@@ -87,7 +87,7 @@ div.icon {
 img {
   max-width: 100%;
   max-height: 100%;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 }
 p.title {
   color: #FFF;
@@ -99,7 +99,7 @@ p.detail {
   color: #FFF;
   margin: 0.5rem 1rem;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   article {
     grid-template-columns: repeat(1, 1fr);
   }

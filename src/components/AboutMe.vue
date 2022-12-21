@@ -72,7 +72,7 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   article {
     flex-direction: column-reverse;
   }
