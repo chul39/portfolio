@@ -92,7 +92,7 @@ nav .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1280px;
+  max-width: 1920px;
 }
 nav .nav-wrapper .logo {
   position: relative;

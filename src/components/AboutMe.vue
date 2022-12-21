@@ -62,17 +62,38 @@ article {
   flex-direction: row;
 }
 div.text {
-  max-width: 50%;
+  max-width: 60%;
 }
 div.image {
-  max-width: 50%;
-  padding: 0 3em;
+  max-width: 40%;
+  margin: auto;
 }
 img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 20rem;
 }
-@media (max-width: 768px) {
+p.intro {
+  background-color: #FFF;
+  width: fit-content;
+  padding: 0.3rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+p.main {
+  color: #FFF;
+  margin: 0.5rem 0;
+}
+@media (max-width: 1200px) {
+  img {
+    max-height: 100%;
+  }
+}
+@media (min-width: 992px) {
+  img {
+    padding: 0 3rem;
+  }
+}
+@media (max-width: 992px) {
   article {
     flex-direction: column-reverse;
   }
@@ -80,19 +101,15 @@ img {
     max-width: 100%;
   }
   div.image {
-    max-width: 100%;
-    padding: 0;
+    max-width: 50%;
+    padding: 0 !important;
+    margin: 0;
   }
 }
-p.intro {
-  background-color: #FFF;
-  width: fit-content;
-  padding: 0.3em;
-  font-weight: 500;
-  margin: 0.5em 0;
-}
-p.main {
-  color: #FFF;
-  margin: 0.5em 0;
+@media (max-width: 768px) {
+  div.image {
+    max-width: 100%;
+    padding: 0 !important;
+  }
 }
 </style>

@@ -77,6 +77,7 @@ article {
 }
 div.item {
   display: flex;
+  margin-bottom: 1.5rem;
 }
 div.text {
   max-width: 70%;
@@ -86,7 +87,7 @@ div.icon {
 }
 img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 8rem;
   margin-top: 0.5rem;
 }
 p.title {
@@ -99,15 +100,17 @@ p.detail {
   color: #FFF;
   margin: 0.5rem 1rem;
 }
+@media (max-width: 1200px) {
+  img {
+    max-height: 100%;
+  }
+}
 @media (max-width: 768px) {
   article {
     grid-template-columns: repeat(1, 1fr);
   }
   p.title {
     font-size: 1rem;
-  }
-  div.item {
-    margin-bottom: 1.5rem;
   }
 }
 </style>
