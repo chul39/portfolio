@@ -1,14 +1,14 @@
 <template>
   <section id="services">
-    <h1>{{ keys[store.state.currentLanguage].header }}</h1>
+    <h1>{{ displayKeys.header }}</h1>
     <article>
       <div v-for="i in 4" :key="i" class="item">
         <div class="icon">
           <img src="@/assets/corgi-noodles.png">
         </div>
         <div class="text">
-          <p class="title">{{ keys[store.state.currentLanguage].titles[i-1] }}</p>
-          <p class="detail">{{ keys[store.state.currentLanguage].details[i-1] }}</p>
+          <p class="title">{{ displayKeys.titles[i-1] }}</p>
+          <p class="detail">{{ displayKeys.details[i-1] }}</p>
         </div>
       </div>
     </article>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { inject } from 'vue'
+import { inject, computed } from 'vue'
 export default {
   name: "MyService",
   setup() {
@@ -63,7 +63,11 @@ export default {
       }
     }
 
-    return { icons, store, keys }
+    const displayKeys = computed(() => {
+      return keys[store.state.currentLanguage]
+    })
+
+    return { icons, store, displayKeys }
 
   }
 }

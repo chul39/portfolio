@@ -1,10 +1,10 @@
 <template>
   <section id="about">
-    <h1>{{ keys[store.state.currentLanguage].header }}</h1>
+    <h1>{{ displayKeys.header }}</h1>
     <article>
       <div class="text">
-        <p v-for="i in 3" :key="i" class="intro">{{ keys[store.state.currentLanguage].introLines[i-1] }}</p>
-        <p v-for="i in 3" :key="i" class="main">{{ keys[store.state.currentLanguage].mainContents[i-1] }}</p>
+        <p v-for="i in 3" :key="i" class="intro">{{ displayKeys.introLines[i-1] }}</p>
+        <p v-for="i in 3" :key="i" class="main">{{ displayKeys.mainContents[i-1] }}</p>
       </div>
       <div class="image">
         <img src="@/assets/corgi-noodles.png">
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { inject } from 'vue'
+import { computed, inject } from 'vue'
 export default {
   name: "AboutMe",
   setup() {
@@ -50,7 +50,11 @@ export default {
       }
     }
 
-    return { store, keys }
+    const displayKeys = computed(() => {
+      return keys[store.state.currentLanguage]
+    })
+
+    return { store, displayKeys }
 
   }
 }

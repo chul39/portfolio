@@ -5,11 +5,11 @@
       &times;
     </button>
       <ul>
-        <li @click="store.methods.toggleOverlay"><a href="#">{{ keys[store.state.currentLanguage].top }}</a></li>
-        <li @click="store.methods.toggleOverlay"><a href="#about">{{ keys[store.state.currentLanguage].about }}</a></li>
-        <li @click="store.methods.toggleOverlay"><a href="#services">{{ keys[store.state.currentLanguage].service }}</a></li>
-        <li @click="store.methods.toggleOverlay"><a href="#portfolio">{{ keys[store.state.currentLanguage].portfolio }}</a></li>
-        <li @click="store.methods.toggleOverlay"><a href="#contact">{{ keys[store.state.currentLanguage].contact }}</a></li>
+        <li @click="store.methods.toggleOverlay"><a href="#">{{ displayKeys.top }}</a></li>
+        <li @click="store.methods.toggleOverlay"><a href="#about">{{ displayKeys.about }}</a></li>
+        <li @click="store.methods.toggleOverlay"><a href="#services">{{ displayKeys.service }}</a></li>
+        <li @click="store.methods.toggleOverlay"><a href="#portfolio">{{ displayKeys.portfolio }}</a></li>
+        <li @click="store.methods.toggleOverlay"><a href="#contact">{{ displayKeys.contact }}</a></li>
         <hr />
         <li class="language-select">
           <span 
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { ref, inject } from 'vue'
+import { computed, inject } from 'vue'
 export default {
   name: "OverlayMenu",
   setup() {
@@ -52,7 +52,12 @@ export default {
         contact: "お問い合わせ"
       }
     }
-    return { store, keys }
+
+    const displayKeys = computed(() => {
+      return keys[store.state.currentLanguage]
+    })
+
+    return { store, displayKeys }
   }
 }
 </script>

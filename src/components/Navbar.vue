@@ -3,11 +3,11 @@
     <div class="nav-wrapper">
       <a href="#" class="logo">CS</a>
       <ul>
-        <li><a href="#">{{ keys[store.state.currentLanguage].top }}</a></li>
-        <li><a href="#about">{{ keys[store.state.currentLanguage].about }}</a></li>
-        <li><a href="#services">{{ keys[store.state.currentLanguage].service }}</a></li>
-        <li><a href="#portfolio">{{ keys[store.state.currentLanguage].portfolio }}</a></li>
-        <li><a href="#contact">{{ keys[store.state.currentLanguage].contact }}</a></li>
+        <li><a href="#">{{ displayKeys.top }}</a></li>
+        <li><a href="#about">{{ displayKeys.about }}</a></li>
+        <li><a href="#services">{{ displayKeys.service }}</a></li>
+        <li><a href="#portfolio">{{ displayKeys.portfolio }}</a></li>
+        <li><a href="#contact">{{ displayKeys.contact }}</a></li>
         <li class="divider">|</li>
         <li class="language-select">
           <span 
@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { onMounted, ref, inject } from 'vue'
+import { onMounted, ref, computed, inject } from 'vue'
 export default {
   name: "Navbar",
   setup() {
@@ -62,17 +62,15 @@ export default {
       }
     }
 
-    const getUserLocale = () => {
-      if(navigator.languages && navigator.languages.length) return navigator.languages[0]
-      return navigator.userLanguage || navigator.language || navigator.browserLanguage
-    }
+    const displayKeys = computed(() => {
+      return keys[store.state.currentLanguage]
+    })
 
     onMounted(() => {
       window.addEventListener('scroll', () => { isSticky.value = window.scrollY > 0 })
-      if(getUserLocale().includes('ja')) changeLanguage('JP')
     })
 
-    return { store, keys, isSticky }
+    return { store, displayKeys, isSticky }
 
   }
 }
