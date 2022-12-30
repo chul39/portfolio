@@ -4,7 +4,10 @@
     <article>
       <div v-for="i in 4" :key="i" class="item">
         <div class="icon">
-          <img src="@/assets/corgi-noodles.png">
+          <img v-if="i === 1" src="@/assets/responsive-svgrepo-com.svg">
+          <img v-if="i === 2" src="@/assets/game-console-svgrepo-com.svg">
+          <img v-if="i === 3" src="@/assets/database-svgrepo-com.svg">
+          <img v-if="i === 4" src="@/assets/cloud-computing-svgrepo-com.svg">
         </div>
         <div class="text">
           <p class="title">{{ displayKeys.titles[i-1] }}</p>
@@ -22,13 +25,6 @@ export default {
   setup() {
 
     const store = inject('store')
-
-    const icons = [
-      "@/assets/corgi-noodles.png",
-      "@/assets/corgi-noodles.png",
-      "@/assets/corgi-noodles.png",
-      "@/assets/corgi-noodles.png"
-    ]
 
     const keys = {
       "EN": {
@@ -67,7 +63,7 @@ export default {
       return keys[store.state.currentLanguage]
     })
 
-    return { icons, store, displayKeys }
+    return { store, displayKeys }
 
   }
 }
@@ -81,6 +77,7 @@ article {
 }
 div.item {
   display: flex;
+  align-items: center;
   margin-bottom: 1.5rem;
 }
 div.text {
@@ -109,7 +106,7 @@ p.detail {
     max-height: 100%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   article {
     grid-template-columns: repeat(1, 1fr);
   }

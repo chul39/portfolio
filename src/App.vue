@@ -7,10 +7,8 @@
   <main>
     <AboutMe />
     <MyService />
-    <section id="portfolio">
-    </section>
-    <section id="contact">
-    </section>
+    <Portfolio />
+    <Contact />
   </main>
 </template>
 
@@ -22,6 +20,8 @@ import Banner from "@/components/Banner.vue"
 import OverlayMenu from "@/components/OverlayMenu.vue"
 import AboutMe from "@/components/AboutMe.vue"
 import MyService from "@/components/MyService.vue"
+import Portfolio from "@/components/Portfolio.vue"
+import Contact from "@/components/Contact.vue"
 provide('store', store)
 
 const getUserLocale = () => {

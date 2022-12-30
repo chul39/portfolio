@@ -41,7 +41,7 @@ export default {
 }
 .banner-text .sub-text {
   font-size: 4vw;
-  color: #FFC300;
+  color: #F5B301;
   animation: sub-text 3s 1;
 }
 @keyframes main-text {

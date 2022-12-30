@@ -4,6 +4,7 @@
     <article>
       <div class="text">
         <p v-for="i in 3" :key="i" class="intro">{{ displayKeys.introLines[i-1] }}</p>
+        <div style="height: 2rem;"></div>
         <p v-for="i in 3" :key="i" class="main">{{ displayKeys.mainContents[i-1] }}</p>
       </div>
       <div class="image">
@@ -66,10 +67,10 @@ article {
   flex-direction: row;
 }
 div.text {
-  max-width: 60%;
+  max-width: 50%;
 }
 div.image {
-  max-width: 40%;
+  max-width: 50%;
   margin: auto;
 }
 img {
@@ -81,6 +82,7 @@ p.intro {
   width: fit-content;
   padding: 0.3rem;
   font-weight: 500;
+  font-size: 1.25rem;
   margin: 0.5rem 0;
 }
 p.main {
@@ -105,15 +107,19 @@ p.main {
     max-width: 100%;
   }
   div.image {
-    max-width: 50%;
+    max-width: 75%;
     padding: 0 !important;
     margin: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   div.image {
     max-width: 100%;
     padding: 0 !important;
+    margin-bottom: 1.5rem;
+  }
+  p.intro {
+    font-size: 1rem;
   }
 }
 </style>

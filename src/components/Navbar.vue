@@ -91,6 +91,7 @@ nav .nav-wrapper {
   justify-content: space-between;
   align-items: center;
   max-width: 1920px;
+  margin: auto;
 }
 nav .nav-wrapper .logo {
   position: relative;
@@ -132,14 +133,14 @@ nav .nav-wrapper ul li a {
   user-select: none;
 }
 nav .nav-wrapper ul li a:hover {
-  color: #FFC300;
+  color: #F5B301;
 }
 nav .nav-wrapper ul li span.inactive {
   color: #aaa;
   cursor: pointer;
 }
 nav .nav-wrapper ul li span.inactive:hover {
-  color: #FFC300 
+  color: #F5B301 
 }
 nav.sticky {
   padding: 5px 100px;
