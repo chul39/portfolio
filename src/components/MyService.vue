@@ -36,9 +36,9 @@ export default {
           "Cloud computing"
         ],
         details:[
-          "Experienced in fullstack web development using modern technologies such as Vue, Node.js, and Express.",
+          "Experienced in fullstack development using modern technologies such as Vue, Node.js, and Express.",
           "Specialized in creating games with Unity3D. Mainly focused on gameplay and server development.",
-          "Designing and maintaining databases to maximize the performance.",
+          "Designing and maintaining both RDBMS and NoSQL databases.",
           "Implementing cloud services from well-known providers such as Azure and AWS."
         ]
       },
@@ -52,9 +52,9 @@ export default {
         ],
         details: [
           "Vue.js/Express/Node.js等を用いたフルスタックWeb開発",
-          "Unity3Dを用いたゲーム開発・オンラインゲームサーバー開発",
+          "Unity3Dを用いたゲーム開発・サーバー開発",
           "RDBMS/NoSQLデータベースの設計・開発・運用・管理",
-          "AWSやAzureなどクラウドサービス(IaaS, PaaS, SaaS)実施"
+          "AWSやAzureなどクラウドサービス実施"
         ]
       }
     }
@@ -80,14 +80,8 @@ div.item {
   align-items: center;
   margin-bottom: 1.5rem;
 }
-div.text {
-  max-width: 70%;
-}
-div.icon {
-  max-width: 30%;
-}
 img {
-  max-width: 100%;
+  max-width: 8re;
   max-height: 8rem;
   margin-top: 0.5rem;
 }
@@ -100,11 +94,6 @@ p.title {
 p.detail {
   color: #FFF;
   margin: 0.5rem 1rem;
-}
-@media (max-width: 1200px) {
-  img {
-    max-height: 100%;
-  }
 }
 @media (max-width: 767px) {
   article {
