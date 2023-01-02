@@ -1,7 +1,7 @@
 <template>
    <section id="contact">
     <h1>{{ displayKeys.header }}</h1>
-    <article>
+    <div class="container">
       <div class="item">
         <div class="icon">
           <img src="@/assets/github-svgrepo-com.svg">
@@ -26,7 +26,7 @@
           <p class="title">Wantedly</p>
         </div>
       </div>
-    </article>
+    </div>
    </section>
 </template>
 
@@ -58,44 +58,49 @@ export default {
 </script>
 
 <style scoped>
-article {
+.container {
+  grid-column: 2/span 12;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2rem;
 }
-div.item {
+.item {
+  grid-column-end: span 3;
   display: flex;
   align-items: center;
   background-color: #FFF;
-  border-radius: 1.5rem;
   cursor: pointer;
+  transition: all 0.3s ease 0s; 
 }
-div.text {
-  max-width: 70%;
+.item:hover {
+  transform: translateY(-7px);
 }
-div.icon {
+.icon {
+  display: flex;
   max-width: 5rem;
   max-height: 5rem;
   margin: 0 0.5rem;
   padding: 0;
 }
 img {
-  max-width: 5rem;
-  max-height: 5rem;
+  max-width: 3rem;
+  max-height: 3rem;
 }
 p.title {
   color: #000;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 0 0.25rem;
 }
-@media (max-width: 1200px) {
-  img {
-    max-height: 100%;
-  }
-}
 @media (max-width: 767px) {
-  article {
-    grid-template-columns: repeat(1, 1fr);
+  .container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+  }
+  .item {
+    grid-column-end: span 6;
+  }
+  p.title {
+    justify-content: center;
   }
 }
 </style>
