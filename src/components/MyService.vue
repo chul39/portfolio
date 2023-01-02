@@ -81,9 +81,10 @@ div.item {
   margin-bottom: 1.5rem;
 }
 img {
-  max-width: 8re;
+  max-width: 8rem;
   max-height: 8rem;
   margin-top: 0.5rem;
+  margin-right: 0.5rem;
 }
 p.title {
   color: #FFF;

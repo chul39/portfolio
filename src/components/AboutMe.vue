@@ -4,8 +4,8 @@
     <article>
       <div class="text">
         <p v-for="i in 3" :key="i" class="intro">{{ displayKeys.introLines[i-1] }}</p>
-        <div style="height: 2rem;"></div>
-        <p v-for="i in 3" :key="i" class="main">{{ displayKeys.mainContents[i-1] }}</p>
+        <div style="height: 1rem;"></div>
+        <p v-for="i in 2" :key="i" class="main">{{ displayKeys.mainContents[i-1] }}</p>
       </div>
       <div class="image">
         <img src="@/assets/corgi-noodles.png">

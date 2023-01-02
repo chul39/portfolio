@@ -135,6 +135,10 @@ nav .nav-wrapper ul li a {
 nav .nav-wrapper ul li a:hover {
   color: #F5B301;
 }
+nav .nav-wrapper ul li span {
+  color: #FFF;
+  cursor: pointer;
+}
 nav .nav-wrapper ul li span.inactive {
   color: #aaa;
   cursor: pointer;
