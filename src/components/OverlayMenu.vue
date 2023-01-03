@@ -7,8 +7,8 @@
       <ul>
         <li @click="store.methods.toggleOverlay"><a href="#">{{ displayKeys.top }}</a></li>
         <li @click="store.methods.toggleOverlay"><a href="#about">{{ displayKeys.about }}</a></li>
-        <li @click="store.methods.toggleOverlay"><a href="#services">{{ displayKeys.service }}</a></li>
-        <li @click="store.methods.toggleOverlay"><a href="#portfolio">{{ displayKeys.portfolio }}</a></li>
+        <li @click="store.methods.toggleOverlay"><a href="#skills">{{ displayKeys.skills }}</a></li>
+        <li @click="store.methods.toggleOverlay"><a href="#projects">{{ displayKeys.projects }}</a></li>
         <li @click="store.methods.toggleOverlay"><a href="#contact">{{ displayKeys.contact }}</a></li>
         <hr />
         <li class="language-select">
@@ -40,15 +40,15 @@ export default {
       "EN": {
         top: "TOP",
         about: "ABOUT",
-        service: "SERVICES",
-        portfolio: "PORTFOLIO",
+        skills: "SKILLS",
+        projects: "PROJECTS",
         contact: "CONTACT"
       },
       "JP": {
         top: "トップ",
         about: "自己紹介",
-        service: "サービス",
-        portfolio: "ポートフォリオ",
+        skills: "スキル",
+        projects: "プロジェクト",
         contact: "お問い合わせ"
       }
     }

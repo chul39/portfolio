@@ -5,8 +5,8 @@
       <ul>
         <li><a href="#">{{ displayKeys.top }}</a></li>
         <li><a href="#about">{{ displayKeys.about }}</a></li>
-        <li><a href="#services">{{ displayKeys.service }}</a></li>
-        <li><a href="#portfolio">{{ displayKeys.portfolio }}</a></li>
+        <li><a href="#skills">{{ displayKeys.skills }}</a></li>
+        <li><a href="#projects">{{ displayKeys.projects }}</a></li>
         <li><a href="#contact">{{ displayKeys.contact }}</a></li>
         <li class="divider">|</li>
         <li class="language-select">
@@ -49,15 +49,15 @@ export default {
       "EN": {
         top: "TOP",
         about: "ABOUT",
-        service: "SERVICES",
-        portfolio: "PORTFOLIO",
+        skills: "SKILLS",
+        projects: "PROJECTS",
         contact: "CONTACT"
       },
       "JP": {
         top: "トップ",
         about: "自己紹介",
-        service: "サービス",
-        portfolio: "ポートフォリオ",
+        skills: "スキル",
+        projects: "プロジェクト",
         contact: "お問い合わせ"
       }
     }

@@ -6,8 +6,8 @@
   </header>
   <main>
     <AboutMe />
-    <MyService />
-    <Portfolio />
+    <MySkills />
+    <Projects />
     <Contact />
   </main>
 </template>
@@ -19,8 +19,8 @@ import Navbar from "@/components/Navbar.vue"
 import Banner from "@/components/Banner.vue"
 import OverlayMenu from "@/components/OverlayMenu.vue"
 import AboutMe from "@/components/AboutMe.vue"
-import MyService from "@/components/MyService.vue"
-import Portfolio from "@/components/Portfolio.vue"
+import MySkills from "@/components/MySkills.vue"
+import Projects from "@/components/Projects.vue"
 import Contact from "@/components/Contact.vue"
 provide('store', store)
 

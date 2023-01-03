@@ -26,8 +26,8 @@ export default {
       "EN": {
         header: "About me",
         introLines: [
-          "My name is Chunlaphat Suwannaat.",
-          "I'm a developer based in Tokyo, Japan.",
+          "I'm Chunlaphat Suwannaat,",
+          "A developer based in Tokyo, Japan.",
           "I create web apps and games."
         ],
         mainContents: [
@@ -89,17 +89,7 @@ p.main {
   color: #FFF;
   margin: 0.5rem 0;
 }
-@media (max-width: 1200px) {
-  img {
-    max-height: 100%;
-  }
-}
-@media (min-width: 992px) {
-  img {
-    padding: 0 3rem;
-  }
-}
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   article {
     flex-direction: column-reverse;
   }
@@ -111,15 +101,14 @@ p.main {
     padding: 0 !important;
     margin: 0;
   }
-}
-@media (max-width: 767px) {
   div.image {
     max-width: 100%;
-    padding: 0 !important;
-    margin-bottom: 1.5rem;
   }
   p.intro {
     font-size: 1rem;
+  }
+  img {
+    max-height: 100%;
   }
 }
 </style>

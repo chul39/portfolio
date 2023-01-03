@@ -1,5 +1,5 @@
 <template>
-  <section id="services">
+  <section id="skills">
     <h1>{{ displayKeys.header }}</h1>
     <article>
       <div v-for="i in 4" :key="i" class="item">
@@ -21,14 +21,14 @@
 <script>
 import { inject, computed } from 'vue'
 export default {
-  name: "MyService",
+  name: "MySkills",
   setup() {
 
     const store = inject('store')
 
     const keys = {
       "EN": {
-        header: "Services",
+        header: "Skills",
         titles: [
           "Web development",
           "Game development",
@@ -43,7 +43,7 @@ export default {
         ]
       },
       "JP": {
-        header: "サービス",
+        header: "スキル",
         titles: [
           "Web開発",
           "ゲーム開発",
@@ -81,8 +81,8 @@ div.item {
   margin-bottom: 1.5rem;
 }
 img {
-  max-width: 8rem;
-  max-height: 8rem;
+  max-width: 7rem;
+  max-height: 7rem;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
 }
