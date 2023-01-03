@@ -124,4 +124,14 @@ ul li span.inactive {
   color: #aaa;
   cursor: pointer;
 }
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
 </style>

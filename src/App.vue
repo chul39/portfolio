@@ -30,7 +30,20 @@ const getUserLocale = () => {
 }
 
 onMounted(() => {
+
   if(getUserLocale().includes('ja')) store.methods.changeLanguage('JP')
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('observer-target-in')
+      }
+    })
+  })
+
+  const toBeAnimatedOnIntersection = document.querySelectorAll('.observer-target')
+  toBeAnimatedOnIntersection.forEach(el => observer.observe(el))
+  
 })
 </script>
 

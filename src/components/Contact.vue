@@ -1,8 +1,8 @@
 <template>
    <section id="contact">
-    <h1>{{ displayKeys.header }}</h1>
+    <h1 class="observer-target">{{ displayKeys.header }}</h1>
     <div class="container">
-      <div class="item">
+      <div class="item observer-target">
         <div class="icon">
           <img src="@/assets/github-svgrepo-com.svg">
         </div>
@@ -10,7 +10,7 @@
           <p class="title">Github</p>
         </div>
       </div>
-      <div class="item">
+      <div class="item observer-target">
         <div class="icon">
           <img src="@/assets/linkedin-svgrepo-com.svg">
         </div>
@@ -18,7 +18,7 @@
           <p class="title">Linkedin</p>
         </div>
       </div>
-      <div class="item">
+      <div class="item observer-target">
         <div class="icon">
           <img src="@/assets/Wantedly_Mark_LightBG.svg">
         </div>
@@ -70,10 +70,9 @@ export default {
   align-items: center;
   background-color: #FFF;
   cursor: pointer;
-  transition: all 0.3s ease 0s; 
 }
 .item:hover {
-  transform: translateY(-7px);
+  background-color: #F5B301;
 }
 .icon {
   display: flex;

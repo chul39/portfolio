@@ -1,9 +1,9 @@
 <template>
    <section id="projects">
-    <h1>{{ displayKeys.header }}</h1>
+    <h1 class="observer-target">{{ displayKeys.header }}</h1>
       <div class="cards">
         <!-- PROJECT 0 -->
-        <div class="card">
+        <div class="card observer-target">
           <div class="card-image">
             <img src="@/assets/corgi-noodles.png" />
           </div>
@@ -17,7 +17,7 @@
           </div>
         </div>
         <!-- PROJECT 1 -->
-        <div class="card">
+        <div class="card observer-target">
           <div class="card-image">
             <img src="@/assets/corgi-noodles.png" />
           </div>
@@ -35,7 +35,7 @@
           </div>
         </div>
         <!-- PROJECT 2 -->
-        <div class="card">
+        <div class="card observer-target">
           <div class="card-image">
             <img src="@/assets/corgi-noodles.png" />
           </div>
@@ -50,7 +50,7 @@
           </div>
         </div>
         <!-- PROJECT 3 -->
-        <div class="card">
+        <div class="card observer-target">
           <div class="card-image">
             <img src="@/assets/corgi-noodles.png" />
           </div>
@@ -65,7 +65,7 @@
           </div>
         </div>
         <!-- PROJECT 4 -->
-        <div class="card">
+        <div class="card observer-target">
           <div class="card-image">
             <img src="@/assets/corgi-noodles.png" />
           </div>
@@ -82,7 +82,7 @@
           </div>
         </div>
         <!-- PROJECT 5 -->
-        <div class="card">
+        <div class="card observer-target">
           <div class="card-image">
             <img src="@/assets/corgi-noodles.png" />
           </div>
@@ -118,7 +118,7 @@ export default {
           "Multiplayer Yacht-clone",
           "Blobfish (Mobile game)",
           "Rhythm-based Level Generator",
-          "Web Portfolio",
+          "Responsive Web Portfolio",
           "ISE Admission Web Application"
         ]
       },
@@ -126,10 +126,10 @@ export default {
         header: "ポートフォリオ",
         titles: [
           "未定",
-          "ヨットのクローンゲーム",
-          "スマホ向けの育成ゲーム",
+          "マルチプレイヤー用クローンゲーム：ヨット",
+          "スマホ向けの育成ゲーム：ブロブフィッシュ",
           "音楽でゲームレベル自動生成システム",
-          "WEBポートフォリオ",
+          "レスポンシブWEBポートフォリオ",
           "ISE入学用のWEBアプリケーション"
         ]
       }
@@ -156,12 +156,11 @@ export default {
   grid-column-end: span 4;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #FFF;
   cursor: pointer;
-  transition: all 0.3s ease 0s;
 }
 .card:hover {
-  transform: translateY(-7px);
+  background-color: #F5B301;
 }
 .card-image {
   overflow: hidden;

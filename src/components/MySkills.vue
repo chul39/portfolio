@@ -1,8 +1,8 @@
 <template>
   <section id="skills">
-    <h1>{{ displayKeys.header }}</h1>
+    <h1 class="observer-target">{{ displayKeys.header }}</h1>
     <article>
-      <div v-for="i in 4" :key="i" class="item">
+      <div v-for="i in 4" :key="i" class="item observer-target">
         <div class="icon">
           <img v-if="i === 1" src="@/assets/responsive-svgrepo-com.svg">
           <img v-if="i === 2" src="@/assets/game-console-svgrepo-com.svg">

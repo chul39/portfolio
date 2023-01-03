@@ -1,13 +1,13 @@
 <template>
   <section id="about">
-    <h1>{{ displayKeys.header }}</h1>
+    <h1 class="observer-target">{{ displayKeys.header }}</h1>
     <article>
-      <div class="text">
+      <div class="text observer-target">
         <p v-for="i in 3" :key="i" class="intro">{{ displayKeys.introLines[i-1] }}</p>
         <div style="height: 1rem;"></div>
         <p v-for="i in 2" :key="i" class="main">{{ displayKeys.mainContents[i-1] }}</p>
       </div>
-      <div class="image">
+      <div class="image observer-target">
         <img src="@/assets/corgi-noodles.png">
       </div>
     </article>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { computed, inject } from 'vue'
+import { computed, inject, onMounted } from 'vue'
 export default {
   name: "AboutMe",
   setup() {
@@ -53,6 +53,10 @@ export default {
 
     const displayKeys = computed(() => {
       return keys[store.state.currentLanguage]
+    })
+
+    onMounted(() => {
+      console.log("MOUNTED")
     })
 
     return { store, displayKeys }

@@ -25,22 +25,24 @@ h1 {
   font-size: 2.5em;
   font-weight: 700;
   text-transform: uppercase;
+  width: fit-content;
+}
+
+.observer-target {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.observer-target-in {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0); 
 }
 
 @media (max-width: 992px) {
   section {
     padding: 50px 20px;
   }
-}
-
-.visible {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.5s linear;
-}
-
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s 0.5s, opacity 0.5s linear;
 }
