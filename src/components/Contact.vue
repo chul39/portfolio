@@ -4,7 +4,7 @@
     <div class="container">
       <div class="item observer-target">
         <div class="icon">
-          <img src="@/assets/github-svgrepo-com.svg">
+          <img src="@/assets/imgs/github-svgrepo-com.svg">
         </div>
         <div class="text">
           <p class="title">Github</p>
@@ -12,7 +12,7 @@
       </div>
       <div class="item observer-target">
         <div class="icon">
-          <img src="@/assets/linkedin-svgrepo-com.svg">
+          <img src="@/assets/imgs/linkedin-svgrepo-com.svg">
         </div>
         <div class="text">
           <p class="title">Linkedin</p>
@@ -20,7 +20,7 @@
       </div>
       <div class="item observer-target">
         <div class="icon">
-          <img src="@/assets/Wantedly_Mark_LightBG.svg">
+          <img src="@/assets/imgs/Wantedly_Mark_LightBG.svg">
         </div>
         <div class="text">
           <p class="title">Wantedly</p>
@@ -59,7 +59,7 @@ export default {
 
 <style scoped>
 .container {
-  grid-column: 2/span 12;
+  grid-column: 1/span 12;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 2rem;
@@ -70,8 +70,10 @@ export default {
   align-items: center;
   background-color: #FFF;
   cursor: pointer;
+  padding: 0.5rem 0;
 }
 .item:hover {
+  transform: translateY(-0.5rem);
   background-color: #F5B301;
 }
 .icon {

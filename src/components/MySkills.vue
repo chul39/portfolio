@@ -4,10 +4,10 @@
     <article>
       <div v-for="i in 4" :key="i" class="item observer-target">
         <div class="icon">
-          <img v-if="i === 1" src="@/assets/responsive-svgrepo-com.svg">
-          <img v-if="i === 2" src="@/assets/game-console-svgrepo-com.svg">
-          <img v-if="i === 3" src="@/assets/database-svgrepo-com.svg">
-          <img v-if="i === 4" src="@/assets/cloud-computing-svgrepo-com.svg">
+          <img v-if="i === 1" src="@/assets/imgs/responsive-svgrepo-com.svg">
+          <img v-if="i === 2" src="@/assets/imgs/game-console-svgrepo-com.svg">
+          <img v-if="i === 3" src="@/assets/imgs/database-svgrepo-com.svg">
+          <img v-if="i === 4" src="@/assets/imgs/cloud-computing-svgrepo-com.svg">
         </div>
         <div class="text">
           <p class="title">{{ displayKeys.titles[i-1] }}</p>
@@ -52,7 +52,7 @@ export default {
         ],
         details: [
           "Vue.js/Express/Node.js等を用いたフルスタックWeb開発",
-          "Unity3Dを用いたゲーム開発・サーバー開発",
+          "Unity3Dを用いたゲーム開発・ゲームサーバー開発",
           "RDBMS/NoSQLデータベースの設計・開発・運用・管理",
           "AWSやAzureなどクラウドサービス実施"
         ]
@@ -71,11 +71,13 @@ export default {
 
 <style scoped>
 article {
+  grid-column: 1/span 12; 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 30px;
 }
 div.item {
+  grid-column-end: span 6;
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;

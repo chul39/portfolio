@@ -15,7 +15,7 @@ main {
 
 section {
   padding: 50px 100px;
-  max-width: 1920px;
+  max-width: 1440px;
   margin: auto;
 }
 
@@ -27,18 +27,42 @@ h1 {
   text-transform: uppercase;
   width: fit-content;
 }
+h2 {
+  padding: 25px 0px;
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: fit-content;
+}
 
 .observer-target {
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-100%);
-  transition: all 1s;
+  transition: all 0.75s;
 }
 
 .observer-target-in {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0); 
+}
+
+.tech-item {
+  display: flex;
+  flex-grow: 0; 
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+}
+
+.tech-icon {
+  height: 100%;
+  width: 100%;
+  max-height: 4rem;
+  max-width: 4rem;
 }
 
 @media (max-width: 992px) {

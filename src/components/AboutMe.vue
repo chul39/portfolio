@@ -8,7 +8,7 @@
         <p v-for="i in 2" :key="i" class="main">{{ displayKeys.mainContents[i-1] }}</p>
       </div>
       <div class="image observer-target">
-        <img src="@/assets/corgi-noodles.png">
+        <img src="@/assets/imgs/corgi-noodles.png">
       </div>
     </article>
   </section>
@@ -55,10 +55,6 @@ export default {
       return keys[store.state.currentLanguage]
     })
 
-    onMounted(() => {
-      console.log("MOUNTED")
-    })
-
     return { store, displayKeys }
 
   }
@@ -71,11 +67,12 @@ article {
   flex-direction: row;
 }
 div.text {
-  max-width: 50%;
+  max-width: 60%;
 }
 div.image {
-  max-width: 50%;
+  max-width: 40%;
   margin: auto;
+  padding: 2rem;
 }
 img {
   max-width: 100%;
@@ -94,6 +91,9 @@ p.main {
   margin: 0.5rem 0;
 }
 @media (max-width: 767px) {
+  section {
+    padding-top: 200px !important;
+  }
   article {
     flex-direction: column-reverse;
   }

@@ -18,7 +18,7 @@ export default {
 .banner-wrapper {
   max-width: 100%;
   min-height: 100vh;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background-color: #1E2328;
 }
 .banner-text {
   text-align: center;
@@ -46,6 +46,7 @@ export default {
 }
 @keyframes main-text {
   0% {
+    filter: blur(5px);
     color: rgba(0, 0, 0, 0);
     margin-bottom: -50px;
   }
@@ -54,6 +55,7 @@ export default {
     margin-bottom: -50px;
   }
   85% {
+    filter: blur(0);
     margin-bottom: -50px;
   }
 }
@@ -63,6 +65,14 @@ export default {
   }
   85% {
     color: rgba(0, 0, 0, 0);
+  }
+}
+@media (min-width: 1440px) {
+  .banner-text .main-text {
+    font-size: 8rem;
+  }
+  .banner-text .sub-text {
+    font-size: 4rem;
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="overlay" :class="[store.state.isOverlayActive ? 'visible' : 'hidden']">
+  <div class="overlay" :class="{ visible: store.state.isOverlayActive  }">
     <div class="overlay-wrapper">
     <button class="close-overlay" @click="store.methods.toggleOverlay()">
       &times;
@@ -83,6 +83,9 @@ button.close-overlay {
   top: 0;
   left: 0;
   width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s linear;
 }
 .overlay-wrapper {
   display: flex;
@@ -125,13 +128,7 @@ ul li span.inactive {
   cursor: pointer;
 }
 .visible {
-  visibility: visible;
   opacity: 1;
-  transition: opacity 0.5s linear;
-}
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s 0.5s, opacity 0.5s linear;
+  pointer-events: auto;
 }
 </style>

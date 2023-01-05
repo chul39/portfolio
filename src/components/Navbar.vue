@@ -90,7 +90,7 @@ nav .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1920px;
+  max-width: 1440px;
   margin: auto;
 }
 nav .nav-wrapper .logo {
@@ -149,7 +149,7 @@ nav .nav-wrapper ul li span.inactive:hover {
 nav.sticky {
   padding: 5px 100px;
   background: #000;
-  z-index: 98;
+  z-index: 10;
 }
 button.menu-icon {
   display: none;
@@ -159,6 +159,7 @@ button.menu-icon {
   border: none;
   cursor: pointer;
 }
+
 @media (max-width: 992px) {
   nav {
     padding-left: 20px !important;

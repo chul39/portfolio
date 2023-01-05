@@ -2,10 +2,17 @@
    <section id="projects">
     <h1 class="observer-target">{{ displayKeys.header }}</h1>
       <div class="cards">
+
         <!-- PROJECT 0 -->
-        <div class="card observer-target">
+        <!--
+        <Project0
+          :projectTitle="displayKeys.titles[0]"
+          :showModal="showModal[0]"
+          @closeModal="showModal[0] = false"
+        />
+        <div @click="showModal[0] = true" class="card observer-target">
           <div class="card-image">
-            <img src="@/assets/corgi-noodles.png" />
+            <img src="@/assets/imgs/corgi-noodles.png" />
           </div>
           <div class="card-content">
             <div class="card-title">
@@ -16,10 +23,17 @@
             </div>
           </div>
         </div>
+        -->
+        
         <!-- PROJECT 1 -->
-        <div class="card observer-target">
+        <Project1
+          :projectTitle="displayKeys.titles[1]"
+          :showModal="showModal[1]"
+          @closeModal="showModal[1] = false"
+        />
+        <div @click="showModal[1] = true" class="card observer-target">
           <div class="card-image">
-            <img src="@/assets/corgi-noodles.png" />
+            <img src="@/assets/imgs/corgi-noodles.png" />
           </div>
           <div class="card-content">
             <div class="card-title">
@@ -34,10 +48,16 @@
             </div>
           </div>
         </div>
+
         <!-- PROJECT 2 -->
-        <div class="card observer-target">
+        <Project2
+          :projectTitle="displayKeys.titles[2]"
+          :showModal="showModal[2]"
+          @closeModal="showModal[2] = false"
+        />
+        <div @click="showModal[2] = true" class="card observer-target">
           <div class="card-image">
-            <img src="@/assets/corgi-noodles.png" />
+            <img src="@/assets/imgs/corgi-noodles.png" />
           </div>
           <div class="card-content">
             <div class="card-title">
@@ -49,10 +69,16 @@
             </div>
           </div>
         </div>
+
         <!-- PROJECT 3 -->
-        <div class="card observer-target">
+        <Project3
+          :projectTitle="displayKeys.titles[3]"
+          :showModal="showModal[3]"
+          @closeModal="showModal[3] = false"
+        />
+        <div @click="showModal[3] = true" class="card observer-target">
           <div class="card-image">
-            <img src="@/assets/corgi-noodles.png" />
+            <img src="@/assets/imgs/corgi-noodles.png" />
           </div>
           <div class="card-content">
             <div class="card-title">
@@ -64,10 +90,16 @@
             </div>
           </div>
         </div>
+
         <!-- PROJECT 4 -->
-        <div class="card observer-target">
+        <Project4
+          :projectTitle="displayKeys.titles[4]"
+          :showModal="showModal[4]"
+          @closeModal="showModal[4] = false"
+        />
+        <div @click="showModal[4] = true" class="card observer-target">
           <div class="card-image">
-            <img src="@/assets/corgi-noodles.png" />
+            <img src="@/assets/imgs/corgi-noodles.png" />
           </div>
           <div class="card-content">
             <div class="card-title">
@@ -81,10 +113,16 @@
             </div>
           </div>
         </div>
+
         <!-- PROJECT 5 -->
-        <div class="card observer-target">
+        <Project5 
+          :projectTitle="displayKeys.titles[5]"
+          :showModal="showModal[5]"
+          @closeModal="showModal[5] = false"
+        />
+        <div @click="showModal[5] = true" class="card observer-target">
           <div class="card-image">
-            <img src="@/assets/corgi-noodles.png" />
+            <img src="@/assets/imgs/corgi-noodles.png" />
           </div>
           <div class="card-content">
             <div class="card-title">
@@ -98,14 +136,29 @@
             </div>
           </div>
         </div>
+
       </div>
    </section>
 </template>
 
 <script>
-import { inject, computed } from 'vue'
+import { ref, inject, computed } from 'vue'
+import Project0 from "@/components/Project0.vue"
+import Project1 from "@/components/Project1.vue"
+import Project2 from "@/components/Project2.vue"
+import Project3 from "@/components/Project3.vue"
+import Project4 from "@/components/Project4.vue"
+import Project5 from "@/components/Project5.vue"
 export default {
   name: "Projects",
+  components: {
+    Project0,
+    Project1,
+    Project2,
+    Project3,
+    Project4,
+    Project5
+  },
   setup() {
 
     const store = inject('store')
@@ -139,7 +192,9 @@ export default {
       return keys[store.state.currentLanguage]
     })
 
-    return { store, displayKeys }
+    const showModal = ref([ false, false, false, false, false, false ])
+
+    return { store, displayKeys, showModal }
 
   }
 }
@@ -147,7 +202,7 @@ export default {
 
 <style scoped>
 .cards {
-  grid-column: 2/span 12;
+  grid-column: 1/span 12;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 40px;
@@ -160,6 +215,7 @@ export default {
   cursor: pointer;
 }
 .card:hover {
+  transform: translateY(-0.5rem);
   background-color: #F5B301;
 }
 .card-image {
@@ -168,6 +224,7 @@ export default {
 }
 .card-image img {
   width: 100%;
+  height: 12.5rem;
 }
 .card-content {
   margin: 0.5rem;
