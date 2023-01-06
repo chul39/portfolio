@@ -4,10 +4,10 @@
     <article>
       <div v-for="i in 4" :key="i" class="item observer-target">
         <div class="icon">
-          <img v-if="i === 1" src="@/assets/imgs/responsive-svgrepo-com.svg">
-          <img v-if="i === 2" src="@/assets/imgs/game-console-svgrepo-com.svg">
-          <img v-if="i === 3" src="@/assets/imgs/database-svgrepo-com.svg">
-          <img v-if="i === 4" src="@/assets/imgs/cloud-computing-svgrepo-com.svg">
+          <img v-if="i === 1" src="@/assets/imgs/skills/responsive-svgrepo-com.svg">
+          <img v-if="i === 2" src="@/assets/imgs/skills/game-console-svgrepo-com.svg">
+          <img v-if="i === 3" src="@/assets/imgs/skills/database-svgrepo-com.svg">
+          <img v-if="i === 4" src="@/assets/imgs/skills/cloud-computing-svgrepo-com.svg">
         </div>
         <div class="text">
           <p class="title">{{ displayKeys.titles[i-1] }}</p>

@@ -4,7 +4,7 @@
     <div class="container">
       <div class="item observer-target">
         <div class="icon">
-          <img src="@/assets/imgs/github-svgrepo-com.svg">
+          <img src="@/assets/imgs/contacts/github-svgrepo-com.svg">
         </div>
         <div class="text">
           <p class="title">Github</p>
@@ -12,7 +12,7 @@
       </div>
       <div class="item observer-target">
         <div class="icon">
-          <img src="@/assets/imgs/linkedin-svgrepo-com.svg">
+          <img src="@/assets/imgs/contacts/linkedin-svgrepo-com.svg">
         </div>
         <div class="text">
           <p class="title">Linkedin</p>
@@ -20,7 +20,7 @@
       </div>
       <div class="item observer-target">
         <div class="icon">
-          <img src="@/assets/imgs/Wantedly_Mark_LightBG.svg">
+          <img src="@/assets/imgs/contacts/Wantedly_Mark_LightBG.svg">
         </div>
         <div class="text">
           <p class="title">Wantedly</p>

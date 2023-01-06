@@ -1,10 +1,23 @@
 <template>
   <Modal 
     :showModal="showModal"
+    :carouselLength="3"
+    @updateCurrentSlide="updateCurrentSlide($event)"
     @closeModal="$emit('closeModal')"
   >
     <template v-slot:title>
       {{ projectTitle }}
+    </template>
+    <template v-slot:carousel-slides>
+      <li v-if="showModal && currentSlide === 0" class="carousel-slide">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Et2vXHZSFjk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </li>
+      <li v-if="showModal && currentSlide === 1" class="carousel-slide">
+        <img src="@/assets/imgs/project1/ss1.png"/>
+      </li>
+      <li v-if="showModal && currentSlide === 2" class="carousel-slide">
+        <img src="@/assets/imgs/project1/ss2.png"/>
+      </li>
     </template>
     <template v-slot:content>
       {{ displayKeys.content }}
@@ -46,7 +59,7 @@
 </template>
 
 <script>
-import { inject, computed } from 'vue'
+import { ref, inject, computed } from 'vue'
 import Modal from "@/components/Modal.vue"
 export default {
   name: "Project1",
@@ -76,7 +89,13 @@ export default {
       return keys[store.state.currentLanguage]
     })
 
-    return { store, displayKeys }
+    const currentSlide = ref(0)
+    
+    const updateCurrentSlide = (value) => {
+      currentSlide.value = value
+    }
+
+    return { store, displayKeys, updateCurrentSlide, currentSlide }
 
   }
 }

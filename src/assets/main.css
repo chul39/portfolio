@@ -27,6 +27,7 @@ h1 {
   text-transform: uppercase;
   width: fit-content;
 }
+
 h2 {
   padding: 25px 0px;
   font-size: 2em;
@@ -48,7 +49,7 @@ h2 {
   transform: translateX(0); 
 }
 
-.tech-item {
+div.tech-item {
   display: flex;
   flex-grow: 0; 
   flex-shrink: 0;
@@ -58,11 +59,91 @@ h2 {
   height: 5rem;
 }
 
-.tech-icon {
+img.tech-icon {
   height: 100%;
   width: 100%;
   max-height: 4rem;
   max-width: 4rem;
+}
+
+div.carousel {
+  height: 315px;
+  width: 560px;
+  margin: 0 auto;
+}
+
+button.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  height: 3rem;
+  z-index: 5;
+}
+
+button.carousel-button-left {
+  left: -2.5rem;
+}
+
+.carousel-button-right {
+  right: -2.5rem;
+}
+
+.carousel-button img {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.carousel-slide iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-track-container {
+  height: 100%;
+  position: relative;
+  margin-bottom: 0 !important;
+}
+
+.carousel-track {
+  list-style: none;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+div.carousel-nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.carousel-nav-item {
+  border: 0;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.25rem;
+  background-color: #aaa;
+  cursor: pointer;
+}
+
+.carousel-nav-item-active,
+.carousel-nav-item:hover
+{
+  background-color: #1E2328;
 }
 
 @media (max-width: 992px) {

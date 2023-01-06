@@ -33,7 +33,7 @@
         />
         <div @click="showModal[1] = true" class="card observer-target">
           <div class="card-image">
-            <img src="@/assets/imgs/corgi-noodles.png" />
+            <img src="@/assets/imgs/project1/ss1.png" />
           </div>
           <div class="card-content">
             <div class="card-title">
@@ -41,8 +41,8 @@
             </div>
             <div class="card-info">
               <div class="card-tag">C#</div>
-              <div class="card-tag">Node.js</div>
               <div class="card-tag">Unity</div>
+              <div class="card-tag">Javascript(Node.js)</div>
               <div class="card-tag">Express</div>
               <div class="card-tag">Socket.io</div>
             </div>
@@ -57,7 +57,7 @@
         />
         <div @click="showModal[2] = true" class="card observer-target">
           <div class="card-image">
-            <img src="@/assets/imgs/corgi-noodles.png" />
+            <img src="@/assets/imgs/project2/ss1.png" />
           </div>
           <div class="card-content">
             <div class="card-title">
@@ -78,7 +78,7 @@
         />
         <div @click="showModal[3] = true" class="card observer-target">
           <div class="card-image">
-            <img src="@/assets/imgs/corgi-noodles.png" />
+            <img src="@/assets/imgs/project3/ss2.png" />
           </div>
           <div class="card-content">
             <div class="card-title">
@@ -122,7 +122,7 @@
         />
         <div @click="showModal[5] = true" class="card observer-target">
           <div class="card-image">
-            <img src="@/assets/imgs/corgi-noodles.png" />
+            <img src="@/assets/imgs/project5/lobby.png" />
           </div>
           <div class="card-content">
             <div class="card-title">
@@ -131,6 +131,7 @@
             <div class="card-info">
               <div class="card-tag">HTML</div>
               <div class="card-tag">CSS</div>
+              <div class="card-tag">Bootstrap</div>
               <div class="card-tag">Javascript</div>
               <div class="card-tag">Angular.js</div>
             </div>
@@ -169,7 +170,7 @@ export default {
         titles: [
           "Whatever",
           "Multiplayer Yacht-clone",
-          "Blobfish (Mobile game)",
+          "Blobfish",
           "Rhythm-based Level Generator",
           "Responsive Web Portfolio",
           "ISE Admission Web Application"
@@ -179,8 +180,8 @@ export default {
         header: "ポートフォリオ",
         titles: [
           "未定",
-          "マルチプレイヤー用クローンゲーム：ヨット",
-          "スマホ向けの育成ゲーム：ブロブフィッシュ",
+          "クローンゲーム：ヨット",
+          "育成ゲーム：ブロブフィッシュ",
           "音楽でゲームレベル自動生成システム",
           "レスポンシブWEBポートフォリオ",
           "ISE入学用のWEBアプリケーション"
@@ -225,6 +226,7 @@ export default {
 .card-image img {
   width: 100%;
   height: 12.5rem;
+  object-fit: cover;
 }
 .card-content {
   margin: 0.5rem;
@@ -243,11 +245,10 @@ export default {
 .card-tag {
   color: #ecf0f1;
   font-size: 0.75rem;
-  padding: 5px 10px;
+  padding: 2.5px 5px;
   margin-top: 0.25rem;
   margin-right: 0.25rem;
   background-color: #303032;
-  border-radius: 20px;
 }
 @media (max-width: 1365px) {
   .card {

@@ -11,6 +11,28 @@
           <slot name="title"></slot>
         </h2>
       </div>
+      <div class="carousel" v-if="!hideCarousel">
+        <div class="carousel-track-container">
+          <button class="carousel-button carousel-button-left" @click="toPrevSlide">
+            <img src="@/assets/imgs/left-arrow-svgrepo-com.svg" />
+          </button>
+          <ul class="carousel-track">
+            <slot name="carousel-slides"></slot>
+          </ul>
+          <button class="carousel-button carousel-button-right" @click="toNextSlide">
+            <img src="@/assets/imgs/right-arrow-svgrepo-com.svg" />
+          </button>
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <div 
+          v-for="i in carouselLength" 
+          :key="i" 
+          class="carousel-nav-item" 
+          :class="{ 'carousel-nav-item-active': carouselPointer + 1 === i }"
+          @click="changeSlide(i-1)">
+        </div>
+      </div>
       <div class="info content">
         <div v-if="!hideContent">
           <h3>{{ displayKeys.content }}</h3>
@@ -42,18 +64,20 @@
 </template>
 
 <script>
-import { inject, computed } from 'vue'
+import { ref, inject, computed } from 'vue'
 export default {
   name: "Modal",
   props: {
     showModal: Boolean,
+    carouselLength: Number,
+    hideCarousel: Boolean,
     hideTitle: Boolean,
     hideContent: Boolean,
     hideTechs: Boolean,
     hideAbout: Boolean,
     hideSource: Boolean
   },
-  setup() {
+  setup(props, context) {
 
     const store = inject('store')
 
@@ -76,7 +100,28 @@ export default {
       return keys[store.state.currentLanguage]
     })
 
-    return { store, displayKeys }
+    const carouselPointer = ref(0)
+
+    const toPrevSlide = () => {
+      if (isNaN(props.carouselLength) || props.carouselLength <= 1) return
+      if (carouselPointer.value === 0) carouselPointer.value = props.carouselLength - 1
+      else carouselPointer.value--
+      context.emit("updateCurrentSlide", carouselPointer.value)
+    }
+
+    const toNextSlide = () => {
+      if (isNaN(props.carouselLength) || props.carouselLength <= 1) return
+      if (carouselPointer.value === props.carouselLength - 1) carouselPointer.value = 0
+      else carouselPointer.value++
+      context.emit("updateCurrentSlide", carouselPointer.value)
+    }
+
+    const changeSlide = (target) => {
+      carouselPointer.value = target
+      context.emit("updateCurrentSlide", carouselPointer.value)
+    }
+
+    return { store, displayKeys, carouselPointer, toPrevSlide, toNextSlide, changeSlide }
 
   }
 }
@@ -146,7 +191,7 @@ div.tech-list {
   }
   div.modal {
     height: 90%;
-    width: 75%;
+    width: 50%;
     max-width: 75rem;
     margin: 2.5rem auto;
   }
