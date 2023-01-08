@@ -2,30 +2,36 @@
    <section id="contact">
     <h1 class="observer-target">{{ displayKeys.header }}</h1>
     <div class="container">
-      <div class="item observer-target">
-        <div class="icon">
-          <img src="@/assets/imgs/contacts/github-svgrepo-com.svg">
+      <a class="item-anchor observer-target" href="https://github.com/chul39">
+        <div class="item">
+          <div class="icon">
+            <img src="@/assets/imgs/contacts/github-svgrepo-com.svg">
+          </div>
+          <div class="text">
+            <p class="title">Github</p>
+          </div>
         </div>
-        <div class="text">
-          <p class="title">Github</p>
+      </a>
+      <a class="item-anchor observer-target" href="https://www.linkedin.com/in/chunlaphat-suwannaat">
+        <div class="item">
+          <div class="icon">
+            <img src="@/assets/imgs/contacts/linkedin-svgrepo-com.svg">
+          </div>
+          <div class="text">
+            <p class="title">Linkedin</p>
+          </div>
         </div>
-      </div>
-      <div class="item observer-target">
-        <div class="icon">
-          <img src="@/assets/imgs/contacts/linkedin-svgrepo-com.svg">
+      </a>
+      <a class="item-anchor observer-target" href="https://www.wantedly.com/id/chunlaphat_suwannaat">
+        <div class="item">
+          <div class="icon">
+            <img src="@/assets/imgs/contacts/Wantedly_Mark_LightBG.svg">
+          </div>
+          <div class="text">
+            <p class="title">Wantedly</p>
+          </div>
         </div>
-        <div class="text">
-          <p class="title">Linkedin</p>
-        </div>
-      </div>
-      <div class="item observer-target">
-        <div class="icon">
-          <img src="@/assets/imgs/contacts/Wantedly_Mark_LightBG.svg">
-        </div>
-        <div class="text">
-          <p class="title">Wantedly</p>
-        </div>
-      </div>
+      </a>
     </div>
    </section>
 </template>
@@ -64,10 +70,15 @@ export default {
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 2rem;
 }
-.item {
+.item-anchor {
   grid-column-end: span 3;
   display: flex;
+  text-decoration: none;
+}
+.item {
+  display: flex;
   align-items: center;
+  width: 100%;
   background-color: #FFF;
   cursor: pointer;
   padding: 0.5rem 0;
@@ -97,7 +108,7 @@ p.title {
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 1rem;
   }
-  .item {
+  .item-anchor {
     grid-column-end: span 6;
   }
   p.title {
