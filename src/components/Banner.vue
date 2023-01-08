@@ -26,6 +26,7 @@ export default {
   top: 50%;
   left: 50%; 
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 .banner-text span {
   color: white;
@@ -36,35 +37,34 @@ export default {
 .banner-text .main-text {
   font-size: 8vw;
   font-weight: 500;
+  opacity: 1;
   position: relative;
   animation: main-text 3s 1;
 }
 .banner-text .sub-text {
   font-size: 4vw;
+  opacity: 1;
   color: #F5B301;
   animation: sub-text 3s 1;
 }
 @keyframes main-text {
   0% {
     filter: blur(5px);
-    color: rgba(0, 0, 0, 0);
-    margin-bottom: -50px;
+    opacity: 0;
   }
   30% {
     letter-spacing: 30px;
-    margin-bottom: -50px;
   }
-  85% {
+  75% {
     filter: blur(0);
-    margin-bottom: -50px;
   }
 }
 @keyframes sub-text {
   0% {
-    color: rgba(0, 0, 0, 0);
+    opacity: 0;
   }
-  85% {
-    color: rgba(0, 0, 0, 0);
+  90% {
+    opacity: 0;
   }
 }
 @media (min-width: 1440px) {

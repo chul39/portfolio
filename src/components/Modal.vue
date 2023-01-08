@@ -142,6 +142,7 @@ button.close-modal {
   color: #000;
   font-size: 5rem;
   float: right;
+  z-index: 10;
 }
 div.modal-wrapper {
   background:rgba(0,0,0,0.8);
@@ -185,14 +186,23 @@ div.tech-list {
   column-gap: 1.5rem;
   row-gap: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   div.title {
     margin-top: 0rem;
   }
   div.modal {
     height: 90%;
-    width: 50%;
-    max-width: 75rem;
+    max-width: 75%;
+    margin: 2.5rem auto;
+  }
+}
+@media (min-width: 1920px) {
+  div.title {
+    margin-top: 0rem;
+  }
+  div.modal {
+    height: 90%;
+    max-width: 1000px;
     margin: 2.5rem auto;
   }
 }

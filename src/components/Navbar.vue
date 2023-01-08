@@ -85,6 +85,7 @@ nav {
   max-width: 100vw;
   transition: 0.6s;
   padding: 40px 100px;
+  z-index: 5;
 }
 nav .nav-wrapper {
   display: flex;

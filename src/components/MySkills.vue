@@ -87,6 +87,7 @@ img {
   max-height: 7rem;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
+  overflow-x: none !important;
 }
 p.title {
   color: #FFF;

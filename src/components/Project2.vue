@@ -10,7 +10,7 @@
     </template>
     <template v-slot:carousel-slides>
       <li v-if="showModal && currentSlide === 0" class="carousel-slide">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/BuxIzpdW1ng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/BuxIzpdW1ng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </li>
       <li v-if="showModal && currentSlide === 1" class="carousel-slide">
         <img src="@/assets/imgs/project2/ss1.png"/>

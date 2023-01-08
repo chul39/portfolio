@@ -62,6 +62,9 @@ export default {
 </script>
 
 <style scoped>
+section {
+  padding-top: 50px !important;
+}
 article {
   display: flex;
   flex-direction: row;
