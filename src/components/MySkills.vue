@@ -4,10 +4,10 @@
     <article>
       <div v-for="i in 4" :key="i" class="item observer-target">
         <div class="icon">
-          <img v-if="i === 1" src="@/assets/imgs/skills/responsive-svgrepo-com.svg">
-          <img v-if="i === 2" src="@/assets/imgs/skills/game-console-svgrepo-com.svg">
-          <img v-if="i === 3" src="@/assets/imgs/skills/database-svgrepo-com.svg">
-          <img v-if="i === 4" src="@/assets/imgs/skills/cloud-computing-svgrepo-com.svg">
+          <img v-if="i === 1" src="@/assets/imgs/skills/web-development-svgrepo-com.svg">
+          <img v-if="i === 2" src="@/assets/imgs/skills/basic-game-outline-svgrepo-com.svg">
+          <img v-if="i === 3" src="@/assets/imgs/skills/database-02-svgrepo-com.svg">
+          <img v-if="i === 4" src="@/assets/imgs/skills/cloud-computing-data-5-svgrepo-com.svg">
         </div>
         <div class="text">
           <p class="title">{{ displayKeys.titles[i-1] }}</p>
@@ -90,21 +90,19 @@ img {
   overflow-x: none !important;
 }
 p.title {
-  color: #FFF;
-  font-size: 1.5rem;
-  font-weight: 700;
+  color: #6BD0FF;
+  font-size: 1.2rem;
+  font-weight: 500;
   margin: 0 1rem;
 }
 p.detail {
   color: #FFF;
+  font-weight: 200;
   margin: 0.5rem 1rem;
 }
 @media (max-width: 767px) {
   article {
     grid-template-columns: repeat(1, 1fr);
-  }
-  p.title {
-    font-size: 1rem;
   }
 }
 </style>

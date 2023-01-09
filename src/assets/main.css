@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', 'M PLUS Rounded 1c', sans-serif;
-  color: #1E2328;
+  font-family: 'Poppins', 'Sawarabi Mincho', sans-serif;
+  color: #101010;
 }
 
 main {
-  background-color: #1E2328;
+  background-color: #1F2123;
 }
 
 section {
@@ -21,7 +21,7 @@ section {
 
 h1 {
   padding: 25px 0px;
-  color: #F5B301;
+  color: #6BD0FF;
   font-size: 2.5em;
   font-weight: 700;
   text-transform: uppercase;
@@ -147,7 +147,7 @@ div.carousel-nav {
 .carousel-nav-item-active,
 .carousel-nav-item:hover
 {
-  background-color: #1E2328;
+  background-color: #101010;
 }
 
 @media (max-width: 992px) {

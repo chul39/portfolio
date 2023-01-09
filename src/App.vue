@@ -8,8 +8,10 @@
     <AboutMe />
     <MySkills />
     <Projects />
-    <Contact />
   </main>
+  <footer>
+    <Footer />
+  </footer>
 </template>
 
 <script setup>
@@ -21,7 +23,7 @@ import OverlayMenu from "@/components/OverlayMenu.vue"
 import AboutMe from "@/components/AboutMe.vue"
 import MySkills from "@/components/MySkills.vue"
 import Projects from "@/components/Projects.vue"
-import Contact from "@/components/Contact.vue"
+import Footer from "@/components/Footer.vue"
 provide('store', store)
 
 const getUserLocale = () => {

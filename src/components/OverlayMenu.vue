@@ -111,7 +111,7 @@ ul li a {
   letter-spacing: 2px;
 }
 ul li a:hover {
-  color: #F5B301;
+  color: #6BD0FF;
 }
 ul li span {
   font-size: 1.5em;
@@ -121,7 +121,7 @@ ul li span {
   padding: 1em 0.5em;
 }
 ul li span:hover {
-  color: #F5B301;
+  color: #6BD0FF;
 }
 ul li span.inactive {
   color: #aaa;

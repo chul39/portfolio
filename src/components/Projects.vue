@@ -32,12 +32,10 @@
           @closeModal="showModal[1] = false"
         />
         <div @click="showModal[1] = true" class="card observer-target">
-          <div class="card-image">
-            <img src="@/assets/imgs/project1/ss1.png" />
-          </div>
           <div class="card-content">
             <div class="card-title">
               {{ displayKeys.titles[1] }}
+              <img class="card-title-popup" src="@/assets/imgs/popup-svgrepo-com.svg" />
             </div>
             <div class="card-info">
               <div class="card-tag">C#</div>
@@ -45,6 +43,9 @@
               <div class="card-tag">Javascript(Node.js)</div>
               <div class="card-tag">Express</div>
               <div class="card-tag">Socket.io</div>
+            </div>
+            <div class="card-description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, amet accusantium dolores ad reprehenderit ipsam fuga. Animi hic voluptate eum omnis, impedit accusamus dicta iure est optio. Vero, explicabo sit?
             </div>
           </div>
         </div>
@@ -56,16 +57,17 @@
           @closeModal="showModal[2] = false"
         />
         <div @click="showModal[2] = true" class="card observer-target">
-          <div class="card-image">
-            <img src="@/assets/imgs/project2/ss1.png" />
-          </div>
           <div class="card-content">
             <div class="card-title">
               {{ displayKeys.titles[2] }}
+              <img class="card-title-popup" src="@/assets/imgs/popup-svgrepo-com.svg" />
             </div>
             <div class="card-info">
               <div class="card-tag">C#</div>
               <div class="card-tag">Unity</div>
+            </div>
+            <div class="card-description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, amet accusantium dolores ad reprehenderit ipsam fuga. Animi hic voluptate eum omnis, impedit accusamus dicta iure est optio. Vero, explicabo sit?
             </div>
           </div>
         </div>
@@ -77,16 +79,17 @@
           @closeModal="showModal[3] = false"
         />
         <div @click="showModal[3] = true" class="card observer-target">
-          <div class="card-image">
-            <img src="@/assets/imgs/project3/ss2.png" />
-          </div>
           <div class="card-content">
             <div class="card-title">
               {{ displayKeys.titles[3] }}
+              <img class="card-title-popup" src="@/assets/imgs/popup-svgrepo-com.svg" />
             </div>
             <div class="card-info">
               <div class="card-tag">C#</div>
               <div class="card-tag">Unity</div>
+            </div>
+            <div class="card-description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, amet accusantium dolores ad reprehenderit ipsam fuga. Animi hic voluptate eum omnis, impedit accusamus dicta iure est optio. Vero, explicabo sit?
             </div>
           </div>
         </div>
@@ -98,18 +101,19 @@
           @closeModal="showModal[4] = false"
         />
         <div @click="showModal[4] = true" class="card observer-target">
-          <div class="card-image">
-            <img src="@/assets/imgs/corgi-noodles.png" />
-          </div>
           <div class="card-content">
             <div class="card-title">
               {{ displayKeys.titles[4] }}
+              <img class="card-title-popup" src="@/assets/imgs/popup-svgrepo-com.svg" />
             </div>
             <div class="card-info">
               <div class="card-tag">HTML</div>
               <div class="card-tag">CSS</div>
               <div class="card-tag">Javascript</div>
               <div class="card-tag">Vue.js</div>
+            </div>
+            <div class="card-description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, amet accusantium dolores ad reprehenderit ipsam fuga. Animi hic voluptate eum omnis, impedit accusamus dicta iure est optio. Vero, explicabo sit?
             </div>
           </div>
         </div>
@@ -121,12 +125,10 @@
           @closeModal="showModal[5] = false"
         />
         <div @click="showModal[5] = true" class="card observer-target">
-          <div class="card-image">
-            <img src="@/assets/imgs/project5/lobby.png" />
-          </div>
           <div class="card-content">
             <div class="card-title">
               {{ displayKeys.titles[5] }}
+              <img class="card-title-popup" src="@/assets/imgs/popup-svgrepo-com.svg" />
             </div>
             <div class="card-info">
               <div class="card-tag">HTML</div>
@@ -134,6 +136,9 @@
               <div class="card-tag">Bootstrap</div>
               <div class="card-tag">Javascript</div>
               <div class="card-tag">Angular.js</div>
+            </div>
+            <div class="card-description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, amet accusantium dolores ad reprehenderit ipsam fuga. Animi hic voluptate eum omnis, impedit accusamus dicta iure est optio. Vero, explicabo sit?
             </div>
           </div>
         </div>
@@ -202,31 +207,27 @@ export default {
 </script>
 
 <style scoped>
+section {
+  padding-bottom: 125px;
+}
 .cards {
   grid-column: 1/span 12;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 40px;
+  grid-gap: 20px;
 }
 .card {
   grid-column-end: span 4;
   display: flex;
   flex-direction: column;
-  background-color: #FFF;
+  background-color: #101010;
   cursor: pointer;
+  padding: 15px;
+  border-left: 3px solid #6BD0FF;
+  border-radius: 5px;
 }
 .card:hover {
   transform: translateY(-0.5rem);
-  background-color: #F5B301;
-}
-.card-image {
-  overflow: hidden;
-  position: relative;
-}
-.card-image img {
-  width: 100%;
-  height: 12.5rem;
-  object-fit: cover;
 }
 .card-content {
   margin: 0.5rem;
@@ -234,8 +235,23 @@ export default {
 }
 .card-title {
   margin-bottom: 0.2rem;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #6BD0FF;
+  width: 90%;
+}
+.card-title-popup {
+  max-height: 1.7rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.75rem;
+}
+.card-description {
+ color: #fff;
+ font-size: 0.8rem;
+ font-weight: 200;
+ margin-top: 1rem;
 }
 .card-info {
   display: flex;
@@ -243,12 +259,13 @@ export default {
   align-items: center;
 }
 .card-tag {
-  color: #ecf0f1;
+  color: #6BD0FF;
   font-size: 0.75rem;
   padding: 2.5px 5px;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
   margin-right: 0.25rem;
-  background-color: #303032;
+  border: 1px solid #6BD0FF;
+  border-radius: 3px;
 }
 @media (max-width: 1365px) {
   .card {

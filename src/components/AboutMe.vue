@@ -5,11 +5,14 @@
       <div class="text observer-target">
         <p v-for="i in 3" :key="i" class="intro">{{ displayKeys.introLines[i-1] }}</p>
         <div style="height: 1rem;"></div>
-        <p v-for="i in 2" :key="i" class="main">{{ displayKeys.mainContents[i-1] }}</p>
+        <p class="main">{{ displayKeys.mainContents[0] }}</p>
+        <p style="margin-top: 1.5rem;" class="main">{{ displayKeys.mainContents[1] }}</p>
       </div>
+      <!--
       <div class="image observer-target">
-        <img src="@/assets/imgs/corgi-noodles.png">
+        <img src="">
       </div>
+      -->
     </article>
   </section>
 </template>
@@ -40,7 +43,7 @@ export default {
         header: "自己紹介",
         introLines: [
           "東京を拠点とするエンジニア、",
-          "Chunlaphat Suwannaat と申します。",
+          "Chunlaphat Suwannaatです。",
           "WEBアプリとゲームを作ります。"
         ],
         mainContents: [
@@ -69,6 +72,7 @@ article {
   display: flex;
   flex-direction: row;
 }
+/*
 div.text {
   max-width: 60%;
 }
@@ -81,16 +85,16 @@ img {
   max-width: 100%;
   max-height: 20rem;
 }
+*/
 p.intro {
-  background-color: #FFF;
   width: fit-content;
-  padding: 0.3rem;
   font-weight: 500;
-  font-size: 1.25rem;
-  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  color: #6BD0FF;
 }
 p.main {
   color: #FFF;
+  font-weight: 200;
   margin: 0.5rem 0;
 }
 @media (max-width: 767px) {
@@ -103,19 +107,18 @@ p.main {
   div.text {
     max-width: 100%;
   }
+  p.intro {
+    font-size: 1.2rem;
+  }
+  /*
   div.image {
-    max-width: 75%;
     padding: 0 !important;
     margin: 0;
-  }
-  div.image {
     max-width: 100%;
-  }
-  p.intro {
-    font-size: 1rem;
   }
   img {
     max-height: 100%;
   }
+  */
 }
 </style>

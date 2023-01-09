@@ -134,7 +134,7 @@ nav .nav-wrapper ul li a {
   user-select: none;
 }
 nav .nav-wrapper ul li a:hover {
-  color: #F5B301;
+  color: #6BD0FF;
 }
 nav .nav-wrapper ul li span {
   color: #FFF;
@@ -145,7 +145,7 @@ nav .nav-wrapper ul li span.inactive {
   cursor: pointer;
 }
 nav .nav-wrapper ul li span.inactive:hover {
-  color: #F5B301 
+  color: #6BD0FF 
 }
 nav.sticky {
   padding: 5px 100px;
