@@ -38,14 +38,13 @@
               <img class="card-title-popup" src="@/assets/imgs/popup-svgrepo-com.svg" />
             </div>
             <div class="card-info">
-              <div class="card-tag">C#</div>
-              <div class="card-tag">Unity</div>
-              <div class="card-tag">Javascript(Node.js)</div>
-              <div class="card-tag">Express</div>
-              <div class="card-tag">Socket.io</div>
+              <div class="card-tag">HTML</div>
+              <div class="card-tag">CSS</div>
+              <div class="card-tag">Javascript</div>
+              <div class="card-tag">Vue.js</div>
             </div>
             <div class="card-description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, amet accusantium dolores ad reprehenderit ipsam fuga. Animi hic voluptate eum omnis, impedit accusamus dicta iure est optio. Vero, explicabo sit?
+              {{ displayKeys.description[1] }}
             </div>
           </div>
         </div>
@@ -65,9 +64,14 @@
             <div class="card-info">
               <div class="card-tag">C#</div>
               <div class="card-tag">Unity</div>
+              <!--
+              <div class="card-tag">Javascript(Node.js)</div>
+              <div class="card-tag">Express</div>
+              <div class="card-tag">Socket.io</div>
+              -->
             </div>
             <div class="card-description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, amet accusantium dolores ad reprehenderit ipsam fuga. Animi hic voluptate eum omnis, impedit accusamus dicta iure est optio. Vero, explicabo sit?
+              {{ displayKeys.description[2] }}
             </div>
           </div>
         </div>
@@ -89,7 +93,7 @@
               <div class="card-tag">Unity</div>
             </div>
             <div class="card-description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, amet accusantium dolores ad reprehenderit ipsam fuga. Animi hic voluptate eum omnis, impedit accusamus dicta iure est optio. Vero, explicabo sit?
+              {{ displayKeys.description[3] }}
             </div>
           </div>
         </div>
@@ -107,13 +111,11 @@
               <img class="card-title-popup" src="@/assets/imgs/popup-svgrepo-com.svg" />
             </div>
             <div class="card-info">
-              <div class="card-tag">HTML</div>
-              <div class="card-tag">CSS</div>
-              <div class="card-tag">Javascript</div>
-              <div class="card-tag">Vue.js</div>
+              <div class="card-tag">C#</div>
+              <div class="card-tag">Unity</div>
             </div>
             <div class="card-description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, amet accusantium dolores ad reprehenderit ipsam fuga. Animi hic voluptate eum omnis, impedit accusamus dicta iure est optio. Vero, explicabo sit?
+              {{ displayKeys.description[4] }}            
             </div>
           </div>
         </div>
@@ -138,7 +140,7 @@
               <div class="card-tag">Angular.js</div>
             </div>
             <div class="card-description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, amet accusantium dolores ad reprehenderit ipsam fuga. Animi hic voluptate eum omnis, impedit accusamus dicta iure est optio. Vero, explicabo sit?
+              {{ displayKeys.description[5] }}
             </div>
           </div>
         </div>
@@ -174,22 +176,38 @@ export default {
         header: "projects",
         titles: [
           "Whatever",
-          "Multiplayer Yacht-clone",
+          "My Web Portfolio",
+          "Yacht",
           "Blobfish",
           "Rhythm-based Level Generator",
-          "Responsive Web Portfolio",
           "ISE Admission Web Application"
+        ],
+        description: [
+          "",
+          "Responsive personal portfolio website made with Vue.js.",
+          "A clone of the famous dice game.",
+          "Casual animal raising game.",
+          "Procedural generation of game levels with songs.",
+          "Web application used for university admission."
         ]
       },
       "JP": {
-        header: "ポートフォリオ",
+        header: "プロジェクト",
         titles: [
-          "未定",
-          "クローンゲーム：ヨット",
-          "育成ゲーム：ブロブフィッシュ",
-          "音楽でゲームレベル自動生成システム",
-          "レスポンシブWEBポートフォリオ",
-          "ISE入学用のWEBアプリケーション"
+          "Whatever",
+          "My Portfolio",
+          "Yacht",
+          "Blobfish",
+          "Rhythm-based Level Generator",
+          "ISE Admission Web Application"
+        ],
+        description: [
+          "",
+          "レスポンシブ対応の個人ポートフォリオサイト",
+          "「ヨット」のクローンゲーム",
+          "海底生物育成ゲーム",
+          "音楽ファイルでランナーゲームのレベルを自動生成システム",
+          "大学入学用のWEBアプリケーション"
         ]
       }
     }

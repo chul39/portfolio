@@ -88,14 +88,14 @@ export default {
   user-select: none;
 }
 .banner-text .main-text {
-  font-size: 8vw;
+  font-size: 6rem;
   font-weight: 500;
   opacity: 1;
   position: relative;
   animation: main-text 3s 1;
 }
 .banner-text .sub-text {
-  font-size: 4vw;
+  font-size: 3rem;
   opacity: 1;
   color: #6BD0FF;
   animation: sub-text 3s 1;
@@ -121,14 +121,6 @@ export default {
   }
   90% {
     opacity: 0;
-  }
-}
-@media (min-width: 1440px) {
-  .banner-text .main-text {
-    font-size: 8rem;
-  }
-  .banner-text .sub-text {
-    font-size: 4rem;
   }
 }
 

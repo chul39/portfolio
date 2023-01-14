@@ -52,7 +52,7 @@ export default {
         ],
         details: [
           "Vue.js/Express/Node.js等を用いたフルスタックWeb開発",
-          "Unity3Dを用いたゲーム開発・ゲームサーバー開発",
+          "Unity3Dを用いたゲーム開発・サーバー開発",
           "RDBMS/NoSQLデータベースの設計・開発・運用・管理",
           "AWSやAzureなどクラウドサービス実施"
         ]
