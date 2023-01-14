@@ -7,6 +7,9 @@
       <a class="item-anchor" href="https://www.linkedin.com/in/chunlaphat-suwannaat">Linkedin</a>
       <a class="item-anchor" href="https://www.wantedly.com/id/chunlaphat_suwannaat">Wantedly</a>
     </div>
+    <div class="footer-copyright">
+      © 2023 Chunlaphat Suwannaat
+    </div>
   </div>
 </template>
 
@@ -67,6 +70,14 @@ export default {
   width: 100%;
   height: 7rem;
   column-gap: 1.8rem; 
+}
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #fff;
+  font-size: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 .item-anchor {
   color: #6BD0FF;
