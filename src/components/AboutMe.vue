@@ -98,9 +98,6 @@ p.main {
   margin: 0.5rem 0;
 }
 @media (max-width: 767px) {
-  section {
-    padding-top: 200px !important;
-  }
   article {
     flex-direction: column-reverse;
   }

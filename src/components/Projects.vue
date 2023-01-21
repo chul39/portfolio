@@ -5,7 +5,7 @@
 
         <!-- PROJECT 0 -->
         <!--
-        <Project0
+        <Project5
           :projectTitle="displayKeys.titles[0]"
           :showModal="showModal[0]"
           @closeModal="showModal[0] = false"
@@ -25,16 +25,16 @@
         </div>
         -->
         
-        <!-- PROJECT 1 -->
-        <Project1
-          :projectTitle="displayKeys.titles[1]"
-          :showModal="showModal[1]"
-          @closeModal="showModal[1] = false"
+        <!-- PROJECT 4 -->
+        <Project4
+          :projectTitle="displayKeys.titles[4]"
+          :showModal="showModal[4]"
+          @closeModal="showModal[4] = false"
         />
-        <div @click="showModal[1] = true" class="card observer-target">
+        <div @click="showModal[4] = true" class="card observer-target">
           <div class="card-content">
             <div class="card-title">
-              {{ displayKeys.titles[1] }}
+              {{ displayKeys.titles[4] }}
               <img class="card-title-popup" src="@/assets/imgs/popup-svgrepo-com.svg" />
             </div>
             <div class="card-info">
@@ -44,34 +44,7 @@
               <div class="card-tag">Vue.js</div>
             </div>
             <div class="card-description">
-              {{ displayKeys.description[1] }}
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 2 -->
-        <Project2
-          :projectTitle="displayKeys.titles[2]"
-          :showModal="showModal[2]"
-          @closeModal="showModal[2] = false"
-        />
-        <div @click="showModal[2] = true" class="card observer-target">
-          <div class="card-content">
-            <div class="card-title">
-              {{ displayKeys.titles[2] }}
-              <img class="card-title-popup" src="@/assets/imgs/popup-svgrepo-com.svg" />
-            </div>
-            <div class="card-info">
-              <div class="card-tag">C#</div>
-              <div class="card-tag">Unity</div>
-              <!--
-              <div class="card-tag">Javascript(Node.js)</div>
-              <div class="card-tag">Express</div>
-              <div class="card-tag">Socket.io</div>
-              -->
-            </div>
-            <div class="card-description">
-              {{ displayKeys.description[2] }}
+              {{ displayKeys.description[4] }}
             </div>
           </div>
         </div>
@@ -91,6 +64,11 @@
             <div class="card-info">
               <div class="card-tag">C#</div>
               <div class="card-tag">Unity</div>
+              <!--
+              <div class="card-tag">Javascript(Node.js)</div>
+              <div class="card-tag">Express</div>
+              <div class="card-tag">Socket.io</div>
+              -->
             </div>
             <div class="card-description">
               {{ displayKeys.description[3] }}
@@ -98,16 +76,16 @@
           </div>
         </div>
 
-        <!-- PROJECT 4 -->
-        <Project4
-          :projectTitle="displayKeys.titles[4]"
-          :showModal="showModal[4]"
-          @closeModal="showModal[4] = false"
+        <!-- PROJECT 2 -->
+        <Project2
+          :projectTitle="displayKeys.titles[2]"
+          :showModal="showModal[2]"
+          @closeModal="showModal[2] = false"
         />
-        <div @click="showModal[4] = true" class="card observer-target">
+        <div @click="showModal[2] = true" class="card observer-target">
           <div class="card-content">
             <div class="card-title">
-              {{ displayKeys.titles[4] }}
+              {{ displayKeys.titles[2] }}
               <img class="card-title-popup" src="@/assets/imgs/popup-svgrepo-com.svg" />
             </div>
             <div class="card-info">
@@ -115,21 +93,43 @@
               <div class="card-tag">Unity</div>
             </div>
             <div class="card-description">
-              {{ displayKeys.description[4] }}            
+              {{ displayKeys.description[2] }}
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 5 -->
-        <Project5 
-          :projectTitle="displayKeys.titles[5]"
-          :showModal="showModal[5]"
-          @closeModal="showModal[5] = false"
+        <!-- PROJECT 1 -->
+        <Project1
+          :projectTitle="displayKeys.titles[1]"
+          :showModal="showModal[1]"
+          @closeModal="showModal[1] = false"
         />
-        <div @click="showModal[5] = true" class="card observer-target">
+        <div @click="showModal[1] = true" class="card observer-target">
           <div class="card-content">
             <div class="card-title">
-              {{ displayKeys.titles[5] }}
+              {{ displayKeys.titles[1] }}
+              <img class="card-title-popup" src="@/assets/imgs/popup-svgrepo-com.svg" />
+            </div>
+            <div class="card-info">
+              <div class="card-tag">C#</div>
+              <div class="card-tag">Unity</div>
+            </div>
+            <div class="card-description">
+              {{ displayKeys.description[1] }}            
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 0 -->
+        <Project0 
+          :projectTitle="displayKeys.titles[0]"
+          :showModal="showModal[0]"
+          @closeModal="showModal[0] = false"
+        />
+        <div @click="showModal[0] = true" class="card observer-target">
+          <div class="card-content">
+            <div class="card-title">
+              {{ displayKeys.titles[0] }}
               <img class="card-title-popup" src="@/assets/imgs/popup-svgrepo-com.svg" />
             </div>
             <div class="card-info">
@@ -140,7 +140,7 @@
               <div class="card-tag">Angular.js</div>
             </div>
             <div class="card-description">
-              {{ displayKeys.description[5] }}
+              {{ displayKeys.description[0] }}
             </div>
           </div>
         </div>
@@ -175,39 +175,39 @@ export default {
       "EN": {
         header: "projects",
         titles: [
-          "Whatever",
-          "My Web Portfolio",
-          "Yacht",
-          "Blobfish",
+          "ISE Admission Web Application",
           "Rhythm-based Level Generator",
-          "ISE Admission Web Application"
+          "Blobfish",
+          "Yacht",
+          "My Web Portfolio",
+          "Whatever"
         ],
         description: [
-          "",
-          "Responsive personal portfolio website made with Vue.js.",
-          "A clone of the famous dice game.",
-          "Casual animal raising game.",
+          "Web application used for university admission.",
           "Procedural generation of game levels with songs.",
-          "Web application used for university admission."
+          "Casual animal raising game.",
+          "A clone of the famous dice game.",
+          "Responsive personal portfolio website made with Vue.js.",
+          ""
         ]
       },
       "JP": {
         header: "プロジェクト",
         titles: [
-          "Whatever",
-          "My Portfolio",
-          "Yacht",
-          "Blobfish",
+          "ISE Admission Web Application",
           "Rhythm-based Level Generator",
-          "ISE Admission Web Application"
+          "Blobfish",
+          "Yacht",
+          "My Portfolio",
+          "Whatever"
         ],
         description: [
-          "",
-          "レスポンシブ対応の個人ポートフォリオサイト",
-          "「ヨット」のクローンゲーム",
-          "海底生物育成ゲーム",
+          "大学入学用のWEBアプリケーション",
           "音楽ファイルでランナーゲームのレベルを自動生成システム",
-          "大学入学用のWEBアプリケーション"
+          "海底生物育成ゲーム",
+          "「ヨット」のクローンゲーム",
+          "レスポンシブ対応の個人ポートフォリオサイト",
+          ""
         ]
       }
     }
