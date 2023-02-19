@@ -192,18 +192,13 @@ div.tech-list {
   }
   div.modal {
     height: 90%;
-    max-width: 75%;
+    max-width: 750px;
     margin: 2.5rem auto;
   }
 }
 @media (min-width: 1920px) {
   div.title {
     margin-top: 0rem;
-  }
-  div.modal {
-    height: 90%;
-    max-width: 1000px;
-    margin: 2.5rem auto;
   }
 }
 </style>

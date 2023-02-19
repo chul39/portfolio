@@ -10,7 +10,7 @@
     </template>
     <template v-slot:carousel-slides>
       <li v-if="showModal && currentSlide === 0" class="carousel-slide">
-        <iframe src="https://www.youtube.com/embed/BuxIzpdW1ng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/6sjKkDHbNVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </li>
       <li v-if="showModal && currentSlide === 1" class="carousel-slide">
         <img src="@/assets/imgs/project2/ss1.png"/>
@@ -63,8 +63,8 @@ export default {
         aboutDev: "This game was created by a team of 2 people during our free time. My friend designed and created art assets while I was in charge of game design and programming. I want to learn about creating a movement for the NPC so I designed the game to have the character decide what to do by itself. For the item spawning system, I implemented a design pattern called object pool to recycle the game objects within the scene instead of destroying game objects."
       },
       "JP": {
-        content: "海底生物「ブロブフィッシュ」の育成ゲームです。ブロブフィッシュはプレイエリアの中を泳ぎ回って時々お腹が空いてランダムに生成されたアイテムを食べます。ゴミを食べたらライフポイントが下がって、０になったらゲーム終了します。逆に自然から食べ物を食べたらライフポイントを回復して成長します。プレイヤーはスクリーン上のアイテムを触ったらそのアイテムがなくなりますので、ブロブフィッシュを成長させるためにゴミを出しましょう。",
-        aboutDev: "暇な時に２人でこのゲームを開発しました。別のメンバーはスプライトなどアートアセットのデザインと作成を担当して、私はゲームデザインとUnityでコーディングを担当していました。NPCの動きを学びたいと思ってキャラクターは自分の動きを自分で決めるようにデザインしました。アイテムのスポーンシステムは毎回新しいオブジェクトを生成して破壊する代わりにObjectPoolパターンというデザインパターンを使ってオブジェクトリサイクル機能を実施しました。",
+        content: "ブロブフィッシュという海底生物のスマホ向け育成ゲームです。ブロブフィッシュは成長のために色々なものを食べていますが、海の中にあるものは食べられるものだけではなく、ゴミもいっぱいあります。ブロブフィッシュがゴミを食べたらHPが減るので、プレイヤーはスクリーンの中にあるゴミを触って海を綺麗にすることができます。",
+        aboutDev: "暇な時に2人でこのゲームを開発しました。別のメンバーはスプライトなどアートアセットのデザインと作成を担当して、私はゲームデザインとUnityでコーディングを担当していました。NPCの動きを学びたいと考えて、キャラクターの自動判定機能を実施してみました。その以上、アイテムのスポーンシステムは毎回新しいオブジェクトを生成して破壊する代わりにObjectPoolパターンというデザインパターンを使ってオブジェクトリサイクル機能を実施しました。",
       }
     }
 
