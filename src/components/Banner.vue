@@ -5,17 +5,38 @@
       <span></span>
       <span></span>
     </div>
-    <div class="banner-text">
-      <span class="main-text">CHUNLAPHAT</span>
-      <span class="sub-text">WEB・GAME ENGINEER</span>
+    <div class="banner-text" v-if="store.state.currentLanguage === 'JP'">
+      <div class="main-text">
+        <span>
+          <ruby>
+            CHUNLAPHAT<rt>チュンラパット</rt></ruby> <ruby>SUWANNAAT<rt>スワンナアット</rt>
+          </ruby>
+        </span> 
+        です。
+      </div>
+      <div class="sub-text">
+        <span>WEB</span> と <span>ゲーム</span> を作っています。
+      </div>
+    </div>
+    <div class="banner-text" v-else>
+      <div class="main-text">
+        Hi, I'm <span><ruby>Chunlaphat<rt></rt></ruby> <ruby>Suwannaat<rt></rt></ruby></span>.
+      </div>
+      <div class="sub-text">
+        I create <span>web applications</span> and <span>games</span>.
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { inject } from 'vue'
+import { ref, inject } from 'vue'
 export default {
-  name: "Banner"
+  name: "Banner",
+  setup(props, context) {
+    const store = inject('store')
+    return { store }
+  }
 }
 </script>
 
@@ -80,56 +101,31 @@ export default {
   left: 50%; 
   transform: translate(-50%, -50%);
   z-index: 2;
+  width: 100vw;
+  white-space: nowrap;
 }
-.banner-text span {
-  color: white;
-  text-transform: uppercase;
-  display: block;
+.banner-text div {
+  color: #FFFFFF;
+}
+.banner-text span, ruby, rt {
+  color: #6BD0FF;
   user-select: none;
 }
 .banner-text .main-text {
-  font-size: 6rem;
-  font-weight: 500;
-  opacity: 1;
-  position: relative;
-  animation: main-text 3s 1;
-}
-.banner-text .sub-text {
   font-size: 3rem;
   opacity: 1;
-  color: #6BD0FF;
-  animation: sub-text 3s 1;
+  position: relative;
 }
-@keyframes main-text {
-  0% {
-    filter: blur(5px);
-    opacity: 0;
-    margin-bottom: -50px;
-  }
-  30% {
-    letter-spacing: 30px;
-    margin-bottom: -50px;
-  }
-  85% {
-    filter: blur(0);
-    margin-bottom: -50px;
-  }
+.banner-text .sub-text {
+  font-size: 2rem;
+  opacity: 1;
 }
-@keyframes sub-text {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-}
-
 @media (max-width: 992px) {
   .banner-text .main-text {
-    font-size: 10vw;
+    font-size: 1.5rem;
   }
   .banner-text .sub-text {
-    font-size: 5vw;
+    font-size: 1.25rem;
   }
   @keyframes wave-animate {
     0% {
