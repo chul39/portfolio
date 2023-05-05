@@ -6,11 +6,9 @@
         <p class="main">{{ displayKeys.mainContents[0] }}</p>
         <p style="margin-top: 1.5rem;" class="main">{{ displayKeys.mainContents[1] }}</p>
       </div>
-      <!--
       <div class="image observer-target">
-        <img src="">
+        <img src="../assets/imgs/corgi-noodles.png">
       </div>
-      -->
     </article>
   </section>
 </template>
@@ -54,20 +52,19 @@ article {
   display: flex;
   flex-direction: row;
 }
-/*
 div.text {
-  max-width: 60%;
+  max-width: 75%;
 }
 div.image {
-  max-width: 40%;
   margin: auto;
-  padding: 2rem;
+  margin-right: 0;
+  max-height: 100%;
 }
 img {
   max-width: 100%;
-  max-height: 20rem;
+  max-height: 12rem;
+  border-radius: 50%;
 }
-*/
 p.intro {
   width: fit-content;
   font-weight: 500;
@@ -89,7 +86,6 @@ p.main {
   p.intro {
     font-size: 1.2rem;
   }
-  /*
   div.image {
     padding: 0 !important;
     margin: 0;
@@ -98,6 +94,5 @@ p.main {
   img {
     max-height: 100%;
   }
-  */
 }
 </style>
