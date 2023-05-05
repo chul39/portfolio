@@ -1,6 +1,6 @@
 <template>
    <section id="projects">
-    <h1 class="observer-target">{{ displayKeys.header }}</h1>
+    <h1 class="section-header observer-target">Works</h1>
       <div class="cards">
 
         <!-- PROJECT 0 -->
@@ -173,7 +173,6 @@ export default {
 
     const keys = {
       "EN": {
-        header: "projects",
         titles: [
           "ISE Admission Web Application",
           "Rhythm-based Level Generator",
@@ -192,7 +191,6 @@ export default {
         ]
       },
       "JP": {
-        header: "プロジェクト",
         titles: [
           "ISE Admission Web Application",
           "Rhythm-based Level Generator",
@@ -235,7 +233,7 @@ section {
   grid-gap: 20px;
 }
 .card {
-  grid-column-end: span 4;
+  grid-column-end: span 6;
   display: flex;
   flex-direction: column;
   background-color: #101010;
@@ -284,11 +282,6 @@ section {
   margin-right: 0.25rem;
   border: 1px solid #6BD0FF;
   border-radius: 3px;
-}
-@media (max-width: 1365px) {
-  .card {
-    grid-column-end: span 6;
-  }
 }
 @media (max-width: 767px) {
   .cards {

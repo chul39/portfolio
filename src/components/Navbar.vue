@@ -3,9 +3,7 @@
     <div class="nav-wrapper">
       <a href="#" class="logo">CS</a>
       <ul>
-        <li><a href="#">{{ displayKeys.top }}</a></li>
         <li><a href="#about">{{ displayKeys.about }}</a></li>
-        <li><a href="#skills">{{ displayKeys.skills }}</a></li>
         <li><a href="#projects">{{ displayKeys.projects }}</a></li>
         <li><a href="#contact">{{ displayKeys.contact }}</a></li>
         <li class="divider">|</li>
@@ -47,17 +45,13 @@ export default {
 
     const keys = {
       "EN": {
-        top: "TOP",
         about: "ABOUT",
-        skills: "SKILLS",
         projects: "PROJECTS",
         contact: "CONTACT"
       },
       "JP": {
-        top: "トップ",
         about: "自己紹介",
-        skills: "スキル",
-        projects: "プロジェクト",
+        projects: "制作物",
         contact: "お問い合わせ"
       }
     }
@@ -91,7 +85,7 @@ nav .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
+  max-width: 1280px;
   margin: auto;
 }
 nav .nav-wrapper .logo {

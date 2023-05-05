@@ -1,6 +1,6 @@
 <template>
   <section id="skills">
-    <h1 class="observer-target">{{ displayKeys.header }}</h1>
+    <h1 class="section-header observer-target">Skill</h1>
     <article>
       <div v-for="i in 4" :key="i" class="item observer-target">
         <div class="icon">
@@ -28,7 +28,6 @@ export default {
 
     const keys = {
       "EN": {
-        header: "Skills",
         titles: [
           "Web development",
           "Game development",
@@ -43,7 +42,6 @@ export default {
         ]
       },
       "JP": {
-        header: "スキル",
         titles: [
           "Web開発",
           "ゲーム開発",

@@ -5,9 +5,7 @@
       &times;
     </button>
       <ul>
-        <li @click="store.methods.toggleOverlay"><a href="#">{{ displayKeys.top }}</a></li>
         <li @click="store.methods.toggleOverlay"><a href="#about">{{ displayKeys.about }}</a></li>
-        <li @click="store.methods.toggleOverlay"><a href="#skills">{{ displayKeys.skills }}</a></li>
         <li @click="store.methods.toggleOverlay"><a href="#projects">{{ displayKeys.projects }}</a></li>
         <li @click="store.methods.toggleOverlay"><a href="#contact">{{ displayKeys.contact }}</a></li>
         <hr />
@@ -38,17 +36,13 @@ export default {
     const store = inject('store')
     const keys = {
       "EN": {
-        top: "TOP",
         about: "ABOUT",
-        skills: "SKILLS",
         projects: "PROJECTS",
         contact: "CONTACT"
       },
       "JP": {
-        top: "トップ",
         about: "自己紹介",
-        skills: "スキル",
-        projects: "プロジェクト",
+        projects: "制作物",
         contact: "お問い合わせ"
       }
     }
